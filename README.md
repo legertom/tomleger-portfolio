@@ -1,4 +1,4 @@
-# [Your Name]'s Software Development Portfolio
+# Tom Léger's Software Development Portfolio
 
 Welcome to my software development portfolio GitHub repository! This repository contains a collection of projects and code samples showcasing my skills and experience as a software developer with over 20 years in the industry.
 
