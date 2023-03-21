@@ -8,9 +8,9 @@ In this portfolio, you'll find a diverse range of projects covering various tech
 
 - Full-Stack Development
 - Database Management
-- Agile Methodologies and Project Management
+- Search Engine Optimization
 - Problem Solving and Debugging
-- Effective Communication and Teamwork
+- Leadership
 - System Administration and Networking
 
 ## Projects
