@@ -1,280 +1,571 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Tom Léger - Software Developer</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" >
-		<link rel="stylesheet" href="assets/css/main.css" >
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" ></noscript>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tom Léger — AI Enablement Lead</title>
+	<meta name="description" content="AI Enablement Lead at Clever · Full-stack builder. I ship AI applications with quantified ROI and train every department to rebuild their own workflows. New York, NY.">
+	<link rel="canonical" href="https://tomleger.dev/">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://tomleger.dev/">
+	<meta property="og:title" content="Tom Léger — AI Enablement Lead">
+	<meta property="og:description" content="AI Enablement Lead at Clever · Full-stack builder. I ship AI applications with quantified ROI and train every department to rebuild their own workflows.">
+	<meta property="og:site_name" content="tomleger.dev">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Tom Léger — AI Enablement Lead">
+	<meta name="twitter:description" content="AI Enablement Lead at Clever · Full-stack builder. AI applications with quantified ROI, and enablement across every department.">
+
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e6b4f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='32' fill='%23f6f3ec' text-anchor='middle'%3ETL%3C/text%3E%3C/svg%3E">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Tom Léger",
+		"jobTitle": "AI Enablement Lead",
+		"worksFor": { "@type": "Organization", "name": "Clever, Inc." },
+		"url": "https://tomleger.dev/",
+		"email": "mailto:tomleger@gmail.com",
+		"telephone": "+1-646-944-5494",
+		"address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+		"sameAs": [
+			"https://github.com/legertom",
+			"https://www.linkedin.com/in/tomleger3000/"
+		]
+	}
+	</script>
+
+	<!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
+	<script>
+		(function () {
+			try {
+				var t = localStorage.getItem("theme");
+				if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+			} catch (e) {}
+		})();
+	</script>
+
 	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHGD26XZZX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-YHGD26XZZX');
+	</script>
 
-	<body class="is-preload">
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHGD26XZZX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<style>
+		/* ---------- Tokens ---------- */
+		:root {
+			--bg: #f6f3ec;
+			--surface: #fbf9f4;
+			--ink: #201d17;
+			--ink-soft: #5a5445;
+			--accent: #0e6b4f;
+			--accent-ink: #0a5a42;
+			--hairline: #d9d3c4;
+			--hairline-strong: #b9b19c;
+			--serif: "Newsreader", Georgia, "Times New Roman", serif;
+			--mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+		}
+		@media (prefers-color-scheme: dark) {
+			:root:not([data-theme="light"]) {
+				--bg: #16140f;
+				--surface: #1d1a14;
+				--ink: #ece7da;
+				--ink-soft: #a9a291;
+				--accent: #5ecfa0;
+				--accent-ink: #74d9ae;
+				--hairline: #2f2b22;
+				--hairline-strong: #4a4436;
+			}
+		}
+		:root[data-theme="dark"] {
+			--bg: #16140f;
+			--surface: #1d1a14;
+			--ink: #ece7da;
+			--ink-soft: #a9a291;
+			--accent: #5ecfa0;
+			--accent-ink: #74d9ae;
+			--hairline: #2f2b22;
+			--hairline-strong: #4a4436;
+		}
 
-  gtag('config', 'G-YHGD26XZZX');
-</script>
+		/* ---------- Base ---------- */
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body {
+			background: var(--bg);
+			color: var(--ink);
+			font-family: var(--serif);
+			font-size: 1.125rem;
+			line-height: 1.65;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		::selection { background: var(--accent); color: var(--bg); }
 
-		<!-- Sidebar -->
-			<div id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Portfolio</a></li>
-							<li><a href="#two">Skills</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
+		a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+		a:hover { text-decoration-thickness: 2px; }
+		:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+		.skip-link {
+			position: absolute; left: 1rem; top: -3rem;
+			background: var(--ink); color: var(--bg);
+			padding: 0.5rem 1rem; font-family: var(--mono); font-size: 0.8rem;
+			z-index: 10; transition: top 120ms ease;
+		}
+		.skip-link:focus { top: 1rem; }
+
+		.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem; }
+
+		/* ---------- Header ---------- */
+		header.site {
+			border-bottom: 1px solid var(--hairline);
+			position: sticky; top: 0; z-index: 5;
+			background: color-mix(in srgb, var(--bg) 88%, transparent);
+			backdrop-filter: blur(8px);
+		}
+		.site-bar {
+			display: flex; align-items: baseline; justify-content: space-between;
+			flex-wrap: wrap; gap: 0.4rem 1rem; padding: 0.85rem 0;
+			font-family: var(--mono); font-size: 0.8rem;
+		}
+		.site-bar .brand { color: var(--ink); text-decoration: none; font-weight: 500; letter-spacing: 0.02em; }
+		.site-bar nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; }
+		.site-bar nav a { color: var(--ink-soft); text-decoration: none; }
+		.site-bar nav a:hover { color: var(--accent-ink); }
+		#theme-toggle {
+			font-family: var(--mono); font-size: 0.8rem;
+			background: none; border: 1px solid var(--hairline-strong);
+			color: var(--ink-soft); border-radius: 999px;
+			padding: 0.15rem 0.7rem; cursor: pointer;
+		}
+		#theme-toggle:hover { color: var(--ink); border-color: var(--ink-soft); }
+		@media (max-width: 40rem) { header.site { position: static; } }
+
+		/* ---------- Kickers & rules ---------- */
+		.kicker {
+			font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+			letter-spacing: 0.14em; text-transform: uppercase;
+			color: var(--accent-ink);
+			display: block; margin-bottom: 1rem;
+		}
+		section.block { padding: 4.5rem 0 1rem; border-top: 1px solid var(--hairline); }
+		section.block:first-of-type { border-top: 0; }
+		h2 {
+			font-size: 2rem; font-weight: 500; line-height: 1.15;
+			letter-spacing: -0.01em; margin-bottom: 0.75rem;
+			font-variation-settings: "opsz" 44;
+		}
+		.section-note { color: var(--ink-soft); font-size: 1rem; max-width: 38rem; margin-bottom: 2.5rem; }
+
+		/* ---------- Hero ---------- */
+		.hero { padding: 5.5rem 0 3.5rem; }
+		.hero h1 {
+			font-size: clamp(2.8rem, 7vw, 4.4rem);
+			font-weight: 500; line-height: 1.02; letter-spacing: -0.02em;
+			font-variation-settings: "opsz" 72;
+		}
+		.hero .role {
+			font-family: var(--mono); font-size: 0.95rem; color: var(--ink-soft);
+			margin-top: 1.1rem; letter-spacing: 0.01em;
+		}
+		.hero .role strong { color: var(--accent-ink); font-weight: 500; }
+		.hero .pitch {
+			font-size: clamp(1.3rem, 2.6vw, 1.55rem); line-height: 1.45;
+			font-style: italic; font-weight: 400;
+			max-width: 40rem; margin-top: 2.2rem;
+			font-variation-settings: "opsz" 30;
+		}
+		.hero .bio { color: var(--ink-soft); max-width: 40rem; margin-top: 1.6rem; font-size: 1.05rem; }
+		.hero .actions { margin-top: 2.4rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+		.btn {
+			font-family: var(--mono); font-size: 0.85rem;
+			text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 2px;
+		}
+		.btn.primary { background: var(--accent); color: var(--bg); }
+		.btn.primary:hover { background: var(--accent-ink); }
+		.btn.ghost { border: 1px solid var(--hairline-strong); color: var(--ink); }
+		.btn.ghost:hover { border-color: var(--ink-soft); }
+
+		/* ---------- Stat strip ---------- */
+		.stats {
+			margin: 3.5rem 0 0; padding: 1.6rem 0 0.4rem;
+			border-top: 1px solid var(--hairline);
+			display: grid; grid-template-columns: repeat(3, 1fr);
+			gap: 1.6rem 2rem; list-style: none;
+		}
+		.stats .num {
+			font-family: var(--mono); font-size: 1.55rem; font-weight: 500;
+			color: var(--ink); display: block; font-variant-numeric: tabular-nums;
+		}
+		.stats .label { font-size: 0.85rem; color: var(--ink-soft); font-family: var(--mono); display: block; margin-top: 0.2rem; line-height: 1.4; }
+		@media (max-width: 40rem) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+		/* ---------- Work / case studies ---------- */
+		.case { padding: 2.2rem 0; border-top: 1px solid var(--hairline); display: grid; grid-template-columns: 3.5rem 1fr; gap: 0 1.25rem; }
+		.case:first-of-type { border-top: 1px solid var(--hairline); }
+		.case .index {
+			font-family: var(--mono); font-size: 0.85rem; color: var(--ink-soft);
+			padding-top: 0.45rem; font-variant-numeric: tabular-nums;
+		}
+		.case h3 { font-size: 1.45rem; font-weight: 500; line-height: 1.2; font-variation-settings: "opsz" 40; }
+		.case .meta {
+			font-family: var(--mono); font-size: 0.75rem; color: var(--ink-soft);
+			margin-top: 0.4rem; letter-spacing: 0.04em;
+		}
+		.case .meta a { color: var(--accent-ink); }
+		.case p { margin-top: 0.9rem; color: var(--ink); font-size: 1.05rem; max-width: 38rem; }
+		.case p.outcome { color: var(--ink-soft); }
+		.case p.outcome strong { color: var(--ink); font-weight: 500; }
+		@media (max-width: 40rem) { .case { grid-template-columns: 1fr; } .case .index { padding-top: 0; margin-bottom: 0.3rem; } }
+
+		/* ---------- Enablement ---------- */
+		.enable-list { list-style: none; }
+		.enable-list li {
+			padding: 1.4rem 0; border-top: 1px solid var(--hairline);
+			display: grid; grid-template-columns: 3.5rem 1fr; gap: 0 1.25rem;
+		}
+		.enable-list .tick { font-family: var(--mono); font-size: 0.85rem; color: var(--accent-ink); padding-top: 0.25rem; }
+		.enable-list h3 { font-size: 1.15rem; font-weight: 500; display: inline; }
+		.enable-list p { display: inline; color: var(--ink-soft); font-size: 1.02rem; }
+		@media (max-width: 40rem) { .enable-list li { grid-template-columns: 1.6rem 1fr; gap: 0 0.75rem; } }
+
+		/* ---------- Skills ---------- */
+		.skills { display: grid; gap: 2rem; }
+		.skill-group { border-top: 1px solid var(--hairline); padding-top: 1.3rem; }
+		.skill-group h3 { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.9rem; }
+		.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+		.tags li {
+			font-family: var(--mono); font-size: 0.8rem;
+			border: 1px solid var(--hairline-strong); border-radius: 999px;
+			padding: 0.22rem 0.75rem; color: var(--ink);
+			background: var(--surface);
+		}
+		.tags li.lead { border-color: var(--accent); color: var(--accent-ink); }
+
+		/* ---------- Career ---------- */
+		.career { list-style: none; }
+		.career li { display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; padding: 1.2rem 0; border-top: 1px solid var(--hairline); }
+		.career .when { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); padding-top: 0.35rem; font-variant-numeric: tabular-nums; }
+		.career h3 { font-size: 1.1rem; font-weight: 500; }
+		.career p { color: var(--ink-soft); font-size: 1rem; margin-top: 0.25rem; }
+		.career p strong { color: var(--ink); font-weight: 500; }
+		@media (max-width: 40rem) { .career li { grid-template-columns: 1fr; gap: 0.2rem; } }
+		.resume-line { margin-top: 2rem; font-size: 1rem; color: var(--ink-soft); }
+
+		/* ---------- Contact ---------- */
+		.contact-list { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 2rem; max-width: 34rem; }
+		.contact-list h3 { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3rem; }
+		.contact-list a, .contact-list span { font-size: 1.05rem; }
+		@media (max-width: 34rem) { .contact-list { grid-template-columns: 1fr; } }
+
+		/* ---------- Footer ---------- */
+		footer.site {
+			margin-top: 5rem; border-top: 1px solid var(--hairline);
+			padding: 1.5rem 0 3rem;
+			font-family: var(--mono); font-size: 0.75rem; color: var(--ink-soft);
+			display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+		}
+
+		/* ---------- Entrance motion ---------- */
+		@media (prefers-reduced-motion: no-preference) {
+			.hero > * { opacity: 0; transform: translateY(10px); animation: rise 640ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+			.hero > *:nth-child(1) { animation-delay: 40ms; }
+			.hero > *:nth-child(2) { animation-delay: 110ms; }
+			.hero > *:nth-child(3) { animation-delay: 180ms; }
+			.hero > *:nth-child(4) { animation-delay: 250ms; }
+			.hero > *:nth-child(5) { animation-delay: 320ms; }
+			.hero > *:nth-child(6) { animation-delay: 420ms; }
+			@keyframes rise { to { opacity: 1; transform: none; } }
+		}
+	</style>
+</head>
+<body>
+	<a class="skip-link" href="#work">Skip to content</a>
+
+	<header class="site">
+		<div class="wrap site-bar">
+			<a class="brand" href="#top">tomleger.dev</a>
+			<nav aria-label="Site">
+				<ul>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#enablement">Enablement</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#career">Career</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">dark</button>
+		</div>
+	</header>
+
+	<main id="top" class="wrap">
+
+		<!-- ============ Hero ============ -->
+		<section class="hero" aria-label="Introduction">
+			<span class="kicker">New York, NY</span>
+			<h1>Tom Léger</h1>
+			<p class="role"><strong>AI Enablement Lead</strong> · Full-Stack Builder</p>
+			<p class="pitch">I do both halves of AI enablement: I build full-stack AI applications with quantified ROI, and I train people in every department to rebuild their own workflows.</p>
+			<p class="bio">AI Enablement Lead at Clever, Inc. (EdTech, 44M+ users, high-security SSO environment), reporting to the VP of Strategy &amp; Operations. I own execution of Clever&rsquo;s company-level Internal AI Roadmap across a 300-person organization, run the AI&nbsp;Leads champion program in every department, and own a company KR for AI adoption. That sits on 3.5 years of daily work in Claude Code, Cursor, Codex, Antigravity, and Warp&nbsp;&mdash; and 15+ years shipping software before that.</p>
+			<div class="actions">
+				<a class="btn primary" href="#work">See the work</a>
+				<a class="btn ghost" href="Tom-Leger-Resume.pdf">Resume (PDF)</a>
+			</div>
+			<ul class="stats" aria-label="Key numbers">
+				<li><span class="num">45+</span><span class="label">documented AI use cases</span></li>
+				<li><span class="num">15</span><span class="label">with confirmed positive ROI</span></li>
+				<li><span class="num">300</span><span class="label">people covered by the AI roadmap</span></li>
+				<li><span class="num">44M+</span><span class="label">users on Clever&rsquo;s platform</span></li>
+				<li><span class="num">3.5 yrs</span><span class="label">daily in AI-native dev tools</span></li>
+				<li><span class="num">15+ yrs</span><span class="label">shipping software before that</span></li>
+			</ul>
+		</section>
+
+		<!-- ============ Work ============ -->
+		<section id="work" class="block" aria-labelledby="work-title">
+			<span class="kicker">The building half</span>
+			<h2 id="work-title">Work</h2>
+			<p class="section-note">Most of these run inside Clever, behind SSO &mdash; so they&rsquo;re presented as case studies rather than live demos. The public ones are linked.</p>
+
+			<article class="case">
+				<span class="index" aria-hidden="true">01</span>
+				<div>
+					<h3>The AI Exchange</h3>
+					<p class="meta">Internal · Clever · shipped v1 in ~1 month</p>
+					<p>Clever&rsquo;s internal AI marketplace: employees publish and discover the tools, workflows, and prompts they&rsquo;ve built, through semantic search and a catalog-grounded AI concierge.</p>
+					<p class="outcome">The concierge agent runs with default tools disabled and only three grounded tools, with <strong>SSO enforced server-side</strong> &mdash; built for a high-security environment, not a demo.</p>
 				</div>
-			</div>
+			</article>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			<article class="case">
+				<span class="index" aria-hidden="true">02</span>
+				<div>
+					<h3>Casespace</h3>
+					<p class="meta">Internal · Clever · casebook + KR scoreboard + MCP server</p>
+					<p>The enablement program&rsquo;s system of record: a use-case casebook and a live KR scoreboard, with a Claude-powered coach and an MCP server.</p>
+					<p class="outcome">AI Leads file use cases <strong>directly from Claude Code</strong> &mdash; the tracking system lives where the work happens.</p>
+				</div>
+			</article>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Tom Léger</h1>
-							<p>Full-stack software developer with 20 years in the industry.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly primary">Recent Projects</a></li>
-								<li><a href="TomLéger-Software-Engineer.pdf" class="button icon solid fa-download">Resume</a></li>
-							</ul>
-						</div>
-					</section>
+			<article class="case">
+				<span class="index" aria-hidden="true">03</span>
+				<div>
+					<h3>Formula Studio</h3>
+					<p class="meta">Public · <a href="https://www.formulastudio.net">formulastudio.net</a></p>
+					<p>A workbench for Clever&rsquo;s IDM formula language: playground, visualizer, training, REST + MCP APIs, and an AI assistant that only proposes locally verified formulas.</p>
+					<p class="outcome">Guardrails as features: <strong>human-in-the-loop confirmation</strong>, fail-closed spend caps, rate limiting, and a documented threat model.</p>
+				</div>
+			</article>
 
-				<!-- One -->
-					<div id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/light-control-pro.png" alt="" data-position="center center" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>LightControlPro</h2>
-									<p>Control your Hue lights with this React app</p>
-									<ul class="actions">
-										<li><a href="https://github.com/legertom/light-control-pro" class="button primary">Visit repo</a></li>
-										
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/courtscore.png" alt="" data-position="center center" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>CourtScore</h2>
-									<p>A scorekeeper for tennis games.</p>
-									<ul class="actions">
-										<li><a href="http://courtscore.lol" class="button primary">Visit CourtScore.lol</a></li>
-										<li><a href="https://github.com/legertom/CourtScore/" class="button">Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/sos-errors.png" alt="" data-position="center center" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>sos-errors</h2>
-									<p>A suite of error handling functions in an npm package</p>
-									<ul class="actions">
-										<li><a href="https://www.npmjs.com/package/sos-errors" class="button primary">Visit sos-errors on npmjs</a></li>
-										<li><a href="https://github.com/legertom/sos-errors" class="button">Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/grande.png" alt="" data-position="center center" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Grande</h2>
-									<p>A clone of the website Medium.com built in Ruby on Rails.</p>
-									<ul class="actions">
-										<li><a href="http://grande-means-medium.herokuapp.com" class="button primary">Visit Grande</a></li>
-										<li><a href="https://github.com/legertom/grande-means-medium/" class="button">Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/crawl.png" alt="" data-position="top center" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Crawl</h2>
-									<p>A social network for building and sharing activities with friends. Built on a MERN Stack.</p>
-									<ul class="actions">
-										<li><a href="https://crawl-w52w.onrender.com/#/" class="button primary">Visit Crawl</a></li>
-										<li><a href="https://github.com/mrizwan83/crawl" class="button">Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/laver-map-square.png" alt="" data-position="25% 25%" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Laver Cup Map Visualization</h2>
-									<p>The Laver Cup is a unique tennis tournament that splits the players into Team Europe and Team World. This map is a visualization of how the teams match up. Built in JavaScript with the D3 library.</p>
-									<ul class="actions">
-										<li><a href="https://legertom.github.io/lavercupmap/" class="button primary">Visit Map</a></li>
-										<li><a href="https://github.com/legertom/lavercupmap" class="button">Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/ai-answer-bot.png" alt="" data-position="25% 25%" ></a>
-							<div class="content">
-								<div class="inner">
-									<h2>AI Answer Bot: Chrome Extension</h2>
-									<p> versatile Chrome extension that leverages the power of OpenAI's ChatGPT to answer users' questions based on the context of the current webpage. By simply entering a question, the extension intelligently scans the page and provides a relevant response, making it a valuable tool for users seeking quick and accurate information without leaving the website.</p>
-									<ul class="actions">
-										<!-- <li><a href="https://legertom.github.io/lavercupmap/" class="button primary">Visit Map</a></li> -->
-										<li><a href="https://github.com/legertom/AIAnswerBot" class="button primary">Install At Repo</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</div>
+			<article class="case">
+				<span class="index" aria-hidden="true">04</span>
+				<div>
+					<h3>PMAT</h3>
+					<p class="meta">21 lessons · <a href="https://github.com/legertom/clever-pmat-course">github.com/legertom/clever-pmat-course</a></p>
+					<p>A 21-lesson course in a format I designed where <strong>Claude Code itself is the LMS</strong> &mdash; the tool people are learning is also the thing teaching them.</p>
+				</div>
+			</article>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Skills</h2>
-							<p>With over 20 years in software development, IT and tech, my skills have evolved with the industry.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Full-Stack Developer</h3>
-									Some of my favorites are:
-									<ul>
-										<li>JavaScript</li>
-										<li>Python</li>
-										<li>PHP</li>
-										<li>Ruby on Rails</li>
-										<li>React</li>
-										<li>Node.js</li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Leadership</h3>
-									<p>As an experienced teacher and manager I provide the leadership my team needs to succeed. Effective communication and teamwork are my specialties</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Problem Solving</h3>
-									<p>Debugging code, untangling challenges; my ability to analyze complex problems is how I bring value to my team.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Database Management</h3>
-									<ul>
-										<li>MySQL</li>
-										<li>PostgreSQL</li>
-										<li>MongoDB</li>
-									</ul>
-									
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Search Engine Optimization</h3>
-									Management of SEO campaigns for clients in a variety of industries on projects with over $1M budgets.
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>System Administration and Networking</h3>
-									<p>Maintenance and adminstration of Linux and Windows-based networks, monitoring and troubleshooting network performance and connectivity issues for 400-person teams.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+			<article class="case">
+				<span class="index" aria-hidden="true">05</span>
+				<div>
+					<h3>Citation-first RAG assistant</h3>
+					<p class="meta">Internal · Clever · + remote MCP server</p>
+					<p>A citation-first RAG assistant and remote MCP server over Clever&rsquo;s docs, used from <strong>Claude, VS&nbsp;Code, and Cursor</strong> &mdash; answers arrive grounded in the source, wherever people already work.</p>
+				</div>
+			</article>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contact Tom</h2>
-							<!-- <p>This is a sentence</p> -->
-							<div class="split style1">
-								<!-- <section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section> -->
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Home</h3>
-											<span>Brooklyn, NY</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">tomleger@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(646) 944-5494</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-												<li><a href="http://github.com/legertom" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-												<li><a href="https://www.linkedin.com/in/tomleger3000/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+			<article class="case">
+				<span class="index" aria-hidden="true">06</span>
+				<div>
+					<h3>SSO Explorer &amp; exampledistrict.com</h3>
+					<p class="meta">Internal tooling · demo generator public at <a href="https://www.exampledistrict.com">exampledistrict.com</a></p>
+					<p>Internal Clever tooling for troubleshooting complex SSO workflows, plus a generator for demo districts.</p>
+					<p class="outcome">Cut integration-validation and troubleshooting time <strong>for the whole CS team</strong>.</p>
+				</div>
+			</article>
+		</section>
 
-			</div>
+		<!-- ============ Enablement ============ -->
+		<section id="enablement" class="block" aria-labelledby="enablement-title">
+			<span class="kicker">The people half</span>
+			<h2 id="enablement-title">Enablement</h2>
+			<p class="section-note">Shipping tools is half the job. The other half is making three hundred people better at using them.</p>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Tom's Portfolio. All rights reserved.</li><li>Contact: <a href="https://legertom.github.io/tomleger-portfolio/">Tom Léger</a></li>
+			<ul class="enable-list">
+				<li>
+					<span class="tick" aria-hidden="true">&rarr;</span>
+					<div><h3>AI Leads champion program</h3> <p>&mdash; a trained champion in every department, carrying the roadmap into their own team&rsquo;s work.</p></div>
+				</li>
+				<li>
+					<span class="tick" aria-hidden="true">&rarr;</span>
+					<div><h3>Workflows held to 95% reliability</h3> <p>&mdash; rebuilt-with-AI workflows have to be production-grade, not demo-ready, before they count.</p></div>
+				</li>
+				<li>
+					<span class="tick" aria-hidden="true">&rarr;</span>
+					<div><h3>Company-wide L&amp;D</h3> <p>&mdash; training curricula, office hours, and AI Build Days across the organization.</p></div>
+				</li>
+				<li>
+					<span class="tick" aria-hidden="true">&rarr;</span>
+					<div><h3>The AI-adoption survey</h3> <p>&mdash; designed the company survey (~150 employees) that set the baselines for our adoption KRs.</p></div>
+				</li>
+				<li>
+					<span class="tick" aria-hidden="true">&rarr;</span>
+					<div><h3>The Clever AI Playbook</h3> <p>&mdash; authoring the playbook that is the foundation of the 2027 AI strategy.</p></div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- ============ Skills ============ -->
+		<section id="skills" class="block" aria-labelledby="skills-title">
+			<span class="kicker">Toolkit</span>
+			<h2 id="skills-title">Skills</h2>
+			<p class="section-note">AI-native development leads; fifteen-plus years of full-stack engineering is the foundation under it.</p>
+
+			<div class="skills">
+				<div class="skill-group">
+					<h3>AI-native development</h3>
+					<ul class="tags">
+						<li class="lead">Claude / Claude Code</li>
+						<li class="lead">Cursor</li>
+						<li class="lead">Codex</li>
+						<li class="lead">Antigravity</li>
+						<li class="lead">Warp</li>
+						<li>Agentic workflows</li>
+						<li>Prompt &amp; context engineering</li>
+						<li>LLM API integration</li>
+						<li>MCP server development</li>
+						<li>AI training &amp; enablement program design</li>
 					</ul>
 				</div>
-			</footer>
+				<div class="skill-group">
+					<h3>Full-stack</h3>
+					<ul class="tags">
+						<li>JavaScript / TypeScript</li>
+						<li>Python</li>
+						<li>Ruby</li>
+						<li>PHP</li>
+						<li>React</li>
+						<li>Next.js</li>
+						<li>Node</li>
+						<li>Rails</li>
+						<li>Flask</li>
+						<li>PostgreSQL</li>
+						<li>MySQL</li>
+						<li>MongoDB</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Platform &amp; identity</h3>
+					<ul class="tags">
+						<li>SSO / IDM (SAML, OAuth)</li>
+						<li>GCP</li>
+						<li>AWS</li>
+						<li>Vercel</li>
+						<li>Docker</li>
+						<li>CI/CD</li>
+						<li>Compliance-bound environments (EdTech student data, HIPAA)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- ============ Career ============ -->
+		<section id="career" class="block" aria-labelledby="career-title">
+			<span class="kicker">Trajectory</span>
+			<h2 id="career-title">Career</h2>
 
-	</body>
+			<ul class="career">
+				<li>
+					<span class="when">2026 &mdash; now</span>
+					<div>
+						<h3>Clever, Inc. &mdash; AI Enablement Lead</h3>
+						<p>Owning execution of the company-level Internal AI Roadmap and the AI-adoption KR across a 300-person organization.</p>
+					</div>
+				</li>
+				<li>
+					<span class="when">2024 &mdash; 2026</span>
+					<div>
+						<h3>Clever, Inc. &mdash; Technical Support &rarr; Solutions Engineering</h3>
+						<p><strong>98.5% CSAT</strong> working with high-touch school districts on complex SSO integrations.</p>
+					</div>
+				</li>
+				<li>
+					<span class="when">2022 &mdash; 2024</span>
+					<div>
+						<h3>Freelance full-stack engineering</h3>
+						<p>Client work across the stack; led a <strong>5-engineer team</strong>.</p>
+					</div>
+				</li>
+				<li>
+					<span class="when">Earlier</span>
+					<div>
+						<h3>NYC Health + Hospitals</h3>
+						<p>Automated executive reporting inside HIPAA constraints from <strong>3 hours to 10 minutes</strong>; quadrupled service capacity through process redesign.</p>
+					</div>
+				</li>
+				<li>
+					<span class="when">Before that</span>
+					<div>
+						<h3>Digital agency &amp; localization-industry automation</h3>
+						<p>Including a C# tool that cut manual quoting work <strong>85%</strong>.</p>
+					</div>
+				</li>
+			</ul>
+
+			<p class="resume-line">The full picture is in the <a href="Tom-Leger-Resume.pdf">resume (PDF)</a>.</p>
+		</section>
+
+		<!-- ============ Contact ============ -->
+		<section id="contact" class="block" aria-labelledby="contact-title">
+			<span class="kicker">Get in touch</span>
+			<h2 id="contact-title">Contact</h2>
+
+			<ul class="contact-list">
+				<li><h3>Email</h3><a href="mailto:tomleger@gmail.com">tomleger@gmail.com</a></li>
+				<li><h3>Phone</h3><a href="tel:+16469445494">646-944-5494</a></li>
+				<li><h3>GitHub</h3><a href="https://github.com/legertom">github.com/legertom</a></li>
+				<li><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/tomleger3000/">linkedin.com/in/tomleger3000</a></li>
+				<li><h3>Location</h3><span>New York, NY</span></li>
+			</ul>
+		</section>
+
+		<footer class="site">
+			<span>&copy; 2026 Tom Léger</span>
+			<span>Hand-built. One HTML file, no framework.</span>
+		</footer>
+	</main>
+
+	<script>
+		(function () {
+			var btn = document.getElementById("theme-toggle");
+			var media = window.matchMedia("(prefers-color-scheme: dark)");
+			function current() {
+				return document.documentElement.getAttribute("data-theme") || (media.matches ? "dark" : "light");
+			}
+			function render() {
+				var dark = current() === "dark";
+				btn.textContent = dark ? "light" : "dark";
+				btn.setAttribute("aria-pressed", String(dark));
+				btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+			}
+			btn.addEventListener("click", function () {
+				var next = current() === "dark" ? "light" : "dark";
+				document.documentElement.setAttribute("data-theme", next);
+				try { localStorage.setItem("theme", next); } catch (e) {}
+				render();
+			});
+			render();
+		})();
+	</script>
+</body>
 </html>
