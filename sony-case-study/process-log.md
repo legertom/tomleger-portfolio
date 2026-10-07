@@ -301,3 +301,17 @@ Mid-turn, after seeing slide 1:
 2. Added `scripts/render_log.py` (Markdown to a styled standalone HTML page using the site's Archivo typeface and palette, with a Download button for the raw Markdown and a Print/PDF button, marked noindex) and `scripts/publish-log.sh` (copies the log into the site repo under `sony-case-study/`, renders, commits, pushes).
 3. Rendered and committed to the site repo locally. **Not pushed yet**, pending the candidate's decision on public content (the log names Sony Music, the recruiter's first name, and the candidate's understanding that Sony is rolling out Claude Cowork and Airtable).
 4. Homepage left untouched; the page is reachable only by direct URL at tomleger.dev/sony-case-study/.
+
+---
+
+## Turn 15 — 2026-10-07 15:07 EDT — Log published; link added to slide 5
+
+**Candidate decision (recorded):** Publish the log as is (Sony Music, recruiter's first name, and the Cowork/Airtable rollout understanding left in).
+
+**Candidate prompt (verbatim):**
+> include link to that on our last slide make sure it gets updated when we finish, transparency is awesome
+
+**Steps taken:**
+1. Pushed the site repo; GitHub Pages built and the page returned 200 at https://tomleger.dev/sony-case-study/ with the raw Markdown at /sony-case-study/process-log.md.
+2. Slide 5 disclosure footer now reads: "AI disclosure: Claude Code (Anthropic), under candidate direction, [__] hours. Full prompt log: tomleger.dev/sony-case-study". Speaker notes updated.
+3. Final-step rule recorded here and in the README: after the last edit before submission, run `scripts/publish-log.sh` so the public log matches what Sony receives.
