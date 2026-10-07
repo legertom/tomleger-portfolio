@@ -40,14 +40,57 @@
       <a class="btn ghost" href="javascript:window.print()">Print / PDF</a>
     </div>
   </div>
-  <p class="note">This page is the AI-use citation required by the case-study brief: every working turn, the exact prompts given, the tools used, and the active time per turn. It is regenerated from the working repository. Last published 2026-10-07 15:04 EDT.</p>
+  <p class="note">This page is the AI-use citation required by the case-study brief: every working turn, the exact prompts given, the tools used, and the active time per turn. It is regenerated from the working repository. Last published 2026-10-07 15:05 EDT.</p>
   <h1>Process Log — Sony Music Take-Home Case Study</h1>
 <p><strong>Purpose:</strong> The case study requires that any AI or technical tools be cited by program name, time allotted, and prompt used. This log records every working turn so the final submission can disclose AI assistance accurately and so the reasoning trail is reportable.</p>
 <p><strong>Tool disclosure (standing):</strong>
 - <strong>Program:</strong> Claude Code (Anthropic), desktop app, model Claude Fable 5.1
 - <strong>Role of the tool:</strong> repo setup, note-taking, structuring, drafting, and slide production under the candidate's direction. All diagnoses, prioritization, and tradeoff decisions are reviewed and owned by the candidate.
 - <strong>Other tools:</strong> GitHub (private repo via <code>gh</code> CLI), Python <code>pypdf</code> (PDF text extraction)</p>
-<p><strong>Time tracking:</strong> Work is done in multiple sittings, not one continuous stretch. Each turn carries a timestamp and an estimate of active working minutes for that turn. Total active time is summed at submission for the AI-use citation; wall-clock gaps between turns are not counted. Turns 1–5 active time estimate: ~45 minutes combined.</p>
+<p><strong>Time tracking:</strong> Timestamps on each turn are wall-clock markers only; they do not measure working time, since turns are spread across a day of other work. The brief asks for time allotted to AI tools, so the candidate records actual sittings in the ledger below and totals them at submission. No time is estimated by the AI.</p>
+<h3>Time ledger (filled in by the candidate)</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Start</th>
+<th>End</th>
+<th>Minutes</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-10-07</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Setup, brief intake, hypotheses discussion</td>
+</tr>
+<tr>
+<td>2026-10-07</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Discovery, future state, pilot, measures discussion</td>
+</tr>
+<tr>
+<td>2026-10-07</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Draft 1 review</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total active time with AI tools:</strong> ___ hours (enter at submission)</p>
 <hr />
 <h2>Turn 1 — 2026-10-07 12:12–12:25 EDT — Setup and intake</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
@@ -136,14 +179,14 @@ Tell em more about "It's a registry and a workflow tool,"</p>
 - Noted link to assignment Q4: table structure and required fields = org-wide standard; contents of each Source row = where tailoring lives.</p>
 <p><strong>Status:</strong> Discussion only. Candidate has not yet confirmed Airtable registry design for the deck.</p>
 <hr />
-<h2>Turn 6 — 2026-10-07 13:20 EDT (~10 min active) — Explaining assignment Q3; time-tracking change</h2>
+<h2>Turn 6 — 2026-10-07 13:20 EDT — Explaining assignment Q3; time-tracking change</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>can you explain "Future-state recommendation: At a high level, how would you improve the movement of data from
 platform delivery through stakeholder access and issue resolution?"</p>
 <p>also I am busy today im not doing this all in one 3-4 hr stretch so dont keep time like that</p>
 </blockquote>
-<p><strong>Process change:</strong> Candidate is working in multiple sittings. Stopped elapsed wall-clock tracking. Log now records per-turn active-minute estimates instead; header updated.</p>
+<p><strong>Process change:</strong> Candidate is working in multiple sittings. Stopped elapsed wall-clock tracking. (Per-turn minute estimates were tried next and removed in Turn 14 as unreliable.)</p>
 <p><strong>AI explanation given (Q3):</strong>
 - Q3 asks for the end-to-end pipeline drawn once, in eight rough stages: delivery → landing/validation → normalization/matching → status → access → issue detection/intake → routing/resolution → feedback. Brief's problem 1 = stages 2–5; problem 2 = stages 6–8. "Through issue resolution" implies the loop closes back into the data layer.
 - "Improve" = what changes at each stage vs. today. "High level" = boxes and a sentence each, not architecture.
@@ -152,7 +195,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 - Noted where the registry (if adopted) would sit: stages 3, 4, 6, 7; Cowork at 2, 3, 7 with human review.</p>
 <p><strong>Status:</strong> Explanation only. Candidate has not yet stated their future-state view.</p>
 <hr />
-<h2>Turn 7 — 2026-10-07 13:23 EDT (~5 min active) — Q3 re-explained in plain language</h2>
+<h2>Turn 7 — 2026-10-07 13:23 EDT — Q3 re-explained in plain language</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>i need you to break ti down more --plus simple svp</p>
@@ -160,7 +203,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 <p><strong>AI explanation given:</strong> Walked one report through eight plain steps, today vs. after. Today: report arrives by email/portal; ops checks and reformats by hand; IDs matched from memory; nobody knows status; data lands somewhere; consumer reports a problem via whatever channel with no details; ticket bounces; fix not recorded. After: platforms still deliver however they deliver; arrival is logged and lateness flagged; matching rules written down once; one page shows status per platform; consumers see data where they already look; problems reported via short form (platform, item, what's wrong); form routes to the platform's owner; fix and reason recorded next to the report. Key decision: the mess stops at the moment of arrival; everything after follows the same rules.</p>
 <p><strong>Status:</strong> Explanation only.</p>
 <hr />
-<h2>Turn 8 — 2026-10-07 13:33 EDT (~15 min active) — Candidate's future-state vision</h2>
+<h2>Turn 8 — 2026-10-07 13:33 EDT — Candidate's future-state vision</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>i mean the reality for me is ideally i build an agent that sits on a server -- we use a cron job on the server to pull any data by API, scheduled data feeds, spin up a headless chrome window and login and download the reports from partner portals (using securely stored credentials in env variables etc), but the agent can also take data inputs via slack, email etc so that stakeholders who compile data more manually can submit it. If regional/business teams  compile data in a custom way i would work with them to disover how we can get aces to the data in the least obtrusive way possible.  We should be able to build determinisitc solutions for porcessing the data mostly iwth an agentic fallback in case the shape of the data changes. the agent can incoirporate it when possible and flag that something has changed and hold integrating until the corect human in the loop verifies and approves it.</p>
@@ -179,7 +222,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 - Suggested deck framing: capability-level stage table (intake, processing, storage, access, support) with build effort, low-effort rows first, portal automation outside table as flagged risk. Keep components for live Q&amp;A.</p>
 <p><strong>Status:</strong> Candidate's future-state vision recorded. Deck framing suggested, not yet accepted.</p>
 <hr />
-<h2>Turn 9 — 2026-10-07 13:44 EDT (~10 min active) — Candidate builds it; ROI and success measures</h2>
+<h2>Turn 9 — 2026-10-07 13:44 EDT — Candidate builds it; ROI and success measures</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>I mean I can build it myself i dont need eng!! i just need them to let me use server space. Can you take that into account. for ROI assume I am being paid $100 per hour of SBBS time x number of hours it takes to do discovery/build/test. that is part of the cost of a new solution! that addresses the fginal question, measure of success. we did calc of the manual mess workflow during discovery. Success = we have confirmed positive ROI and tool adoption, anythingf else?</p>
@@ -195,7 +238,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 - Success measures: brief Q6 names four outcomes (manual work, data delivery, visibility, support resolution); ROI covers only the first and adoption is a proxy. Suggested one metric each, baselined in discovery: hours per cycle; share of pilot feeds available within agreed window; count of status-question tickets; time to close + routing hops + share of complete intake; adoption share of pilot stakeholders using new views/form; optional match rate / orphan count for Rights.</p>
 <p><strong>Status:</strong> Candidate's ROI approach and builder role recorded. Metric set proposed, not yet accepted.</p>
 <hr />
-<h2>Turn 10 — 2026-10-07 13:48 EDT (~10 min active) — Ongoing costs and pilot design</h2>
+<h2>Turn 10 — 2026-10-07 13:48 EDT — Ongoing costs and pilot design</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>ongoing costs would be: agentic ingestion, agentic fallbacks if any (hopefully minimal), server resources, --pilot would be starting with anything we can get via API or scheduled data feeds PLUS one previously manual process -which ever one is the (a) simplest and (B) has an enthusiastic stakeholder who is eager to get this proces off their desk and is enthusiastic about AI. We'll need their hands on involvement for testing. we dont want to burn through energy of people who only have a little of it. Once we validate that the new system can handle all the API/data dump data PLUS one formerly human source, we can expand one source at a time.</p>
@@ -211,7 +254,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 - Framing: choosing for enthusiasm over pain is a deliberate tradeoff; pilot's job is to prove the system and create a reference story.</p>
 <p><strong>Status:</strong> Pilot design is now candidate's. Additions proposed, not yet accepted. Q1 hypotheses still parked.</p>
 <hr />
-<h2>Turn 11 — 2026-10-07 13:51 EDT (~10 min active) — Returning to Q1 hypotheses</h2>
+<h2>Turn 11 — 2026-10-07 13:51 EDT — Returning to Q1 hypotheses</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>ok lets go back to the three hypotheses, given what we discvoered where would we start? I can tell you based on my experience: hypothesis #1 is that our data as it exists right now is probably less accurate than anyone is willing to admit</p>
@@ -225,7 +268,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 - Framing: accuracy, effort, ownership = three unmeasured things, one per discovery round. Earlier AI hypothesis on freshness/status folded into H3 or into the rationale for Sources table columns.</p>
 <p><strong>Status:</strong> H1 is the candidate's. H2 and H3 proposed for acceptance, edit, or replacement.</p>
 <hr />
-<h2>Turn 12 — 2026-10-07 13:54 EDT (~5 min active) — H3 rejected, alternatives offered</h2>
+<h2>Turn 12 — 2026-10-07 13:54 EDT — H3 rejected, alternatives offered</h2>
 <p><strong>Candidate prompt (verbatim):</strong></p>
 <blockquote>
 <p>idk about your hypothesis #3</p>
@@ -237,7 +280,7 @@ platform delivery through stakeholder access and issue resolution?"</p>
 3. Nobody can say which data is current (tested by Round 2; reads more as a requirement than a revelation).</p>
 <p><strong>Status:</strong> Awaiting candidate's choice or own H3.</p>
 <hr />
-<h2>Turn 13 — 2026-10-07 14:01 EDT (~35 min active) — H3 chosen; first slide draft produced</h2>
+<h2>Turn 13 — 2026-10-07 14:01 EDT — H3 chosen; first slide draft produced</h2>
 <p><strong>Candidate prompts (verbatim):</strong></p>
 <blockquote>
 <p>ok go with the first one, process lives in people's heads</p>
@@ -255,6 +298,19 @@ platform delivery through stakeholder access and issue resolution?"</p>
 <p><strong>Design choices (AI):</strong> Domine headings, Public Sans body; navy/off-white palette with orange accent; orange OPEN pills mark undecided items on each slide; "Draft 1 · not for submission" footer.</p>
 <p><strong>Open items carried on the slides:</strong> H2 wording; assumption phrasing; title-slide count; extra interview questions; standardization boundary and registry split confirmation; portal-scraping stance; "train the agent" wording; build order; pilot additions (status view and intake form, baseline-hours criterion, exit rule, participants); metric set; final active-time figure for the disclosure.</p>
 <p><strong>Not yet placed:</strong> an explicit risks and tradeoffs line; what fixes H3 (documentation or runbook per source).</p>
+<hr />
+<h2>Turn 14 — 2026-10-07 15:05 EDT — Publishing the log to tomleger.dev; time-tracking corrected</h2>
+<p><strong>Candidate prompts (verbatim):</strong></p>
+<blockquote>
+<p>ok lets make the prompt log available to download at tomleger.dev, my personal (work) portfolio site, lmk if you need help accessing the github</p>
+<p>also lets fix the way you're keeping time your estimates are way way off --just becauyse nothing is happening does not mean i am wokring, i am doing other things!</p>
+</blockquote>
+<p><strong>Process change:</strong> All AI-estimated per-turn minutes removed from this log. Timestamps remain as wall-clock markers only. A time ledger at the top is filled in by the candidate with actual sittings; the AI no longer estimates working time.</p>
+<p><strong>Steps taken:</strong>
+1. Located the site: GitHub Pages from <code>legertom/tomleger-portfolio</code> (single static <code>index.html</code>), local clone at <code>~/repo/tomleger-portfolio</code>, in sync with origin.
+2. Added <code>scripts/render_log.py</code> (Markdown to a styled standalone HTML page using the site's Archivo typeface and palette, with a Download button for the raw Markdown and a Print/PDF button, marked noindex) and <code>scripts/publish-log.sh</code> (copies the log into the site repo under <code>sony-case-study/</code>, renders, commits, pushes).
+3. Rendered and committed to the site repo locally. <strong>Not pushed yet</strong>, pending the candidate's decision on public content (the log names Sony Music, the recruiter's first name, and the candidate's understanding that Sony is rolling out Claude Cowork and Airtable).
+4. Homepage left untouched; the page is reachable only by direct URL at tomleger.dev/sony-case-study/.</p>
 </main>
 </body>
 </html>

@@ -7,7 +7,18 @@
 - **Role of the tool:** repo setup, note-taking, structuring, drafting, and slide production under the candidate's direction. All diagnoses, prioritization, and tradeoff decisions are reviewed and owned by the candidate.
 - **Other tools:** GitHub (private repo via `gh` CLI), Python `pypdf` (PDF text extraction)
 
-**Time tracking:** Work is done in multiple sittings, not one continuous stretch. Each turn carries a timestamp and an estimate of active working minutes for that turn. Total active time is summed at submission for the AI-use citation; wall-clock gaps between turns are not counted. Turns 1–5 active time estimate: ~45 minutes combined.
+**Time tracking:** Timestamps on each turn are wall-clock markers only; they do not measure working time, since turns are spread across a day of other work. The brief asks for time allotted to AI tools, so the candidate records actual sittings in the ledger below and totals them at submission. No time is estimated by the AI.
+
+### Time ledger (filled in by the candidate)
+
+| Date | Start | End | Minutes | What |
+|---|---|---|---|---|
+| 2026-10-07 | | | | Setup, brief intake, hypotheses discussion |
+| 2026-10-07 | | | | Discovery, future state, pilot, measures discussion |
+| 2026-10-07 | | | | Draft 1 review |
+| | | | | |
+
+**Total active time with AI tools:** ___ hours (enter at submission)
 
 ---
 
@@ -120,7 +131,7 @@
 
 ---
 
-## Turn 6 — 2026-10-07 13:20 EDT (~10 min active) — Explaining assignment Q3; time-tracking change
+## Turn 6 — 2026-10-07 13:20 EDT — Explaining assignment Q3; time-tracking change
 
 **Candidate prompt (verbatim):**
 > can you explain "Future-state recommendation: At a high level, how would you improve the movement of data from
@@ -128,7 +139,7 @@
 >
 > also I am busy today im not doing this all in one 3-4 hr stretch so dont keep time like that
 
-**Process change:** Candidate is working in multiple sittings. Stopped elapsed wall-clock tracking. Log now records per-turn active-minute estimates instead; header updated.
+**Process change:** Candidate is working in multiple sittings. Stopped elapsed wall-clock tracking. (Per-turn minute estimates were tried next and removed in Turn 14 as unreliable.)
 
 **AI explanation given (Q3):**
 - Q3 asks for the end-to-end pipeline drawn once, in eight rough stages: delivery → landing/validation → normalization/matching → status → access → issue detection/intake → routing/resolution → feedback. Brief's problem 1 = stages 2–5; problem 2 = stages 6–8. "Through issue resolution" implies the loop closes back into the data layer.
@@ -141,7 +152,7 @@
 
 ---
 
-## Turn 7 — 2026-10-07 13:23 EDT (~5 min active) — Q3 re-explained in plain language
+## Turn 7 — 2026-10-07 13:23 EDT — Q3 re-explained in plain language
 
 **Candidate prompt (verbatim):**
 > i need you to break ti down more --plus simple svp
@@ -152,7 +163,7 @@
 
 ---
 
-## Turn 8 — 2026-10-07 13:33 EDT (~15 min active) — Candidate's future-state vision
+## Turn 8 — 2026-10-07 13:33 EDT — Candidate's future-state vision
 
 **Candidate prompt (verbatim):**
 > i mean the reality for me is ideally i build an agent that sits on a server -- we use a cron job on the server to pull any data by API, scheduled data feeds, spin up a headless chrome window and login and download the reports from partner portals (using securely stored credentials in env variables etc), but the agent can also take data inputs via slack, email etc so that stakeholders who compile data more manually can submit it. If regional/business teams  compile data in a custom way i would work with them to disover how we can get aces to the data in the least obtrusive way possible.  We should be able to build determinisitc solutions for porcessing the data mostly iwth an agentic fallback in case the shape of the data changes. the agent can incoirporate it when possible and flag that something has changed and hold integrating until the corect human in the loop verifies and approves it.
@@ -177,7 +188,7 @@
 
 ---
 
-## Turn 9 — 2026-10-07 13:44 EDT (~10 min active) — Candidate builds it; ROI and success measures
+## Turn 9 — 2026-10-07 13:44 EDT — Candidate builds it; ROI and success measures
 
 **Candidate prompt (verbatim):**
 > I mean I can build it myself i dont need eng!! i just need them to let me use server space. Can you take that into account. for ROI assume I am being paid $100 per hour of SBBS time x number of hours it takes to do discovery/build/test. that is part of the cost of a new solution! that addresses the fginal question, measure of success. we did calc of the manual mess workflow during discovery. Success = we have confirmed positive ROI and tool adoption, anythingf else?
@@ -197,7 +208,7 @@
 
 ---
 
-## Turn 10 — 2026-10-07 13:48 EDT (~10 min active) — Ongoing costs and pilot design
+## Turn 10 — 2026-10-07 13:48 EDT — Ongoing costs and pilot design
 
 **Candidate prompt (verbatim):**
 > ongoing costs would be: agentic ingestion, agentic fallbacks if any (hopefully minimal), server resources, --pilot would be starting with anything we can get via API or scheduled data feeds PLUS one previously manual process -which ever one is the (a) simplest and (B) has an enthusiastic stakeholder who is eager to get this proces off their desk and is enthusiastic about AI. We'll need their hands on involvement for testing. we dont want to burn through energy of people who only have a little of it. Once we validate that the new system can handle all the API/data dump data PLUS one formerly human source, we can expand one source at a time.
@@ -217,7 +228,7 @@
 
 ---
 
-## Turn 11 — 2026-10-07 13:51 EDT (~10 min active) — Returning to Q1 hypotheses
+## Turn 11 — 2026-10-07 13:51 EDT — Returning to Q1 hypotheses
 
 **Candidate prompt (verbatim):**
 > ok lets go back to the three hypotheses, given what we discvoered where would we start? I can tell you based on my experience: hypothesis #1 is that our data as it exists right now is probably less accurate than anyone is willing to admit
@@ -235,7 +246,7 @@
 
 ---
 
-## Turn 12 — 2026-10-07 13:54 EDT (~5 min active) — H3 rejected, alternatives offered
+## Turn 12 — 2026-10-07 13:54 EDT — H3 rejected, alternatives offered
 
 **Candidate prompt (verbatim):**
 > idk about your hypothesis #3
@@ -251,7 +262,7 @@
 
 ---
 
-## Turn 13 — 2026-10-07 14:01 EDT (~35 min active) — H3 chosen; first slide draft produced
+## Turn 13 — 2026-10-07 14:01 EDT — H3 chosen; first slide draft produced
 
 **Candidate prompts (verbatim):**
 > ok go with the first one, process lives in people's heads
@@ -273,3 +284,20 @@ Mid-turn, after seeing slide 1:
 **Open items carried on the slides:** H2 wording; assumption phrasing; title-slide count; extra interview questions; standardization boundary and registry split confirmation; portal-scraping stance; "train the agent" wording; build order; pilot additions (status view and intake form, baseline-hours criterion, exit rule, participants); metric set; final active-time figure for the disclosure.
 
 **Not yet placed:** an explicit risks and tradeoffs line; what fixes H3 (documentation or runbook per source).
+
+---
+
+## Turn 14 — 2026-10-07 15:05 EDT — Publishing the log to tomleger.dev; time-tracking corrected
+
+**Candidate prompts (verbatim):**
+> ok lets make the prompt log available to download at tomleger.dev, my personal (work) portfolio site, lmk if you need help accessing the github
+
+> also lets fix the way you're keeping time your estimates are way way off --just becauyse nothing is happening does not mean i am wokring, i am doing other things!
+
+**Process change:** All AI-estimated per-turn minutes removed from this log. Timestamps remain as wall-clock markers only. A time ledger at the top is filled in by the candidate with actual sittings; the AI no longer estimates working time.
+
+**Steps taken:**
+1. Located the site: GitHub Pages from `legertom/tomleger-portfolio` (single static `index.html`), local clone at `~/repo/tomleger-portfolio`, in sync with origin.
+2. Added `scripts/render_log.py` (Markdown to a styled standalone HTML page using the site's Archivo typeface and palette, with a Download button for the raw Markdown and a Print/PDF button, marked noindex) and `scripts/publish-log.sh` (copies the log into the site repo under `sony-case-study/`, renders, commits, pushes).
+3. Rendered and committed to the site repo locally. **Not pushed yet**, pending the candidate's decision on public content (the log names Sony Music, the recruiter's first name, and the candidate's understanding that Sony is rolling out Claude Cowork and Airtable).
+4. Homepage left untouched; the page is reachable only by direct URL at tomleger.dev/sony-case-study/.
