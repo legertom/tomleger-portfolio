@@ -5,6 +5,7 @@
 **Tool disclosure (standing):**
 - **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1
 - **Role of the tool:** repo setup, note-taking, structuring, drafting, and slide production under the candidate's direction. All diagnoses, prioritization, and tradeoff decisions are reviewed and owned by the candidate.
+- **Later program:** Codex desktop app (OpenAI), used for repo review, explaining the draft, and compiling future-state notes. Its time must be included in the candidate's final AI-use total.
 - **Other tools:** GitHub (private repo via `gh` CLI), Python `pypdf` (PDF text extraction)
 
 **Time tracking:** Timestamps on each turn are wall-clock markers only; they do not measure working time, since turns are spread across a day of other work. The brief asks for time allotted to AI tools, so the candidate records actual sittings in the ledger below and totals them at submission. No time is estimated by the AI.
@@ -16,6 +17,7 @@
 | 2026-10-07 | | | | Setup, brief intake, hypotheses discussion |
 | 2026-10-07 | | | | Discovery, future state, pilot, measures discussion |
 | 2026-10-07 | | | | Draft 1 review |
+| 2026-10-07 | | | | Codex project review and future-state notes |
 | | | | | |
 
 **Total active time with AI tools:** ___ hours (enter at submission)
@@ -315,3 +317,439 @@ Mid-turn, after seeing slide 1:
 1. Pushed the site repo; GitHub Pages built and the page returned 200 at https://tomleger.dev/sony-case-study/ with the raw Markdown at /sony-case-study/process-log.md.
 2. Slide 5 disclosure footer now reads: "AI disclosure: Claude Code (Anthropic), under candidate direction, [__] hours. Full prompt log: tomleger.dev/sony-case-study". Speaker notes updated.
 3. Final-step rule recorded here and in the README: after the last edit before submission, run `scripts/publish-log.sh` so the public log matches what Sony receives.
+
+---
+
+## Turn 16 — 2026-10-07 17:43 EDT — Codex continuation: project review and future-state notes
+
+**Candidate prompts (verbatim):**
+> tell me hat you see this project is about
+>
+> is my first draft of the slides in the folder already
+>
+> Talk to me about "future-state recommenation" and what that means in this context, i'm having troule with the abstractions
+>
+> ok so lets just compile some notes and we'll work on the slides later. The future-state recommendation is a dhasboard with custom views based on stakeholder role and priorities. That stakeholder's priorities show up immediately/are visualized with charts and tables, exportable csvs, but an Ai agent enables them to get answers to questions or file a ticket to ask for help. ANything im missing about how it should work in the future?
+
+**Candidate direction (recorded):** A role-specific dashboard with priority charts and tables, CSV exports, and an AI agent for questions and help-ticket creation. Continue in notes; defer slide edits.
+
+**Steps taken:** Codex inspected the repo, source brief, draft outline, and slide HTML; explained the future-state flow in concrete terms; wrote `docs/future-state-notes.md` with the candidate's direction, supporting workflow requirements, an example, and discovery questions. No slide files were edited.
+
+**AI suggestions for review:** Surface source freshness and quality, alert owners to late or failed feeds, map shared identifiers and definitions for comparison, connect charts to underlying records, keep answers grounded in permitted data with source context, prefill and route tickets through an existing support workflow, and capture recurring fixes in runbooks. These are proposed additions, not yet candidate-approved slide content.
+
+**Time:** This timestamp is a wall-clock marker, not time spent. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 17 — 2026-10-07 21:42 EDT — Candidate's revised answers and presentation story
+
+**Candidate prompt (verbatim):**
+> ok i feel like i understand the problem very well and I feel confident in how i might solve this problem. The obstacle right now is I am having trouble envisioning the story line/through line for the presentation itself.
+>
+> Let me quickly go through high level answers for the six items posed in the "assignment"
+>
+> Initial Diagnosis: 1) first  important problem - With a pipeline this complex (and convoluted) I anticipate the data being messier and less reliable than anyone realizes.  Making sure that stakeholders have clear visiblity into the data we are collecting fro them (their slice of the pie) will be crucial
+>
+> 2) Second important problem: Normalizing the data and metadata. What does the SONY Music data model look like? It needs to be complete, exhaustive but also legible, elegant and opinionated. How do we identify the same song if it is identified using different data on different platforms?
+>
+> 3) Third important problem: Our output/data display needs to serve all the stakeholders and still be a unified Sony Music product.
+>
+> Discovery approach: I will engage the owner of each data source and work with them to map their existing workflow.
+> Collection and transmission: How often do you perform this workflow? How do you transmit the data? How do you know it was completed correctly? How are you notified of exceptions? In an ideal world, how would you like to submit/interact with this data?
+> ROI: how long does it take you (time study) and how frequently is this performed; how often are their exceptions and how long do the exceptions take to clear? Do you handle exceptions or does someone else?
+> (This is so that we can calculate ROI)
+> Output: how do you need to view this data? What do you do with it? Do you export it and take it other places? What do you wish you could get from the data?
+>
+> Future-state recommendation: A single place (URL, app, etc) for each stakeholder to login to to upload, view, edit or delete the data they are responsible for. Even API data has an "owner" who is human and looped in when updates occur.  The app should accept as many data inputs as needed, including: API, scheduled data feeds, emails, uploaded spreadsheets, manual input directly into the platform, slack messages etc because we need to meet teams where they are. Building the input path is a trivial amount of work and our goal should be to build as frictionless a system possible for all parties involved.
+>
+> Standardization and tailoring: Everything that happens before we get the data needs to be tailored to the the existing user and team - the owner of the data. Our job is to normalize it. Everything after data ingestion should be consistent across the  organization. Which is to say, we will take any data the stakeholder wants to send in any form. We will build the integration once. But once the data is in our app/database, it will conform to our data model, which is opinionated.  The shape of our data model is a reflection of the semantic and taxonomic values held by that SONY Music as an organization; it is a self-portrait in json. Anything that comes FROM our app uses that data shape, whether it gets exported to a xlsx file or visualized into a chart. (let it be known that "self-portrait in json" is a line by Tom, NOT Claude) We are basically releasing an API.
+>
+> Initial Pilot: I would start with building for just a single integration method, the simplest, the API. This will force us to begin to standarize the data model without the complexification that comes with working with human stakeholders who are preparing the data. The first users would be the owners of the API data models. After a round of feedback, we would expand the testing audience by one integration and do another round of feedback, repeating this pattern until we have integrated all data sources and owners. Once we have integrated all the data sources and formalized the ingestion process and rhythm, then we can focus on building on that data such that leadership, artists, labels, marketing teams, and all BUs have access to the data they need in the form that they need it. Views can be built for each role and data access can be gated with RBAC.
+>
+> Measures of success is a simple ROI calculation; Whats harder is the advance proof that such a problem is worth solving, given the cost of labor and time investment--this should be speced out before starting.
+>
+> What do you think of my write up so far? Please share feedback also record this somewhere
+
+**Candidate direction (recorded):** Reframes the diagnosis around trust, the common data model, and role-specific usefulness; favors flexible intake, an opinionated internal data shape, an API-first pilot, and a pre-build business case. "A self-portrait in json" is Tom's wording.
+
+**Steps taken:** Codex used the presentation skill for story structure and wrote `docs/presentation-story-notes.md`, which summarizes the candidate's answers, proposes a through line and possible five-slide sequence, and records feedback and unresolved tradeoffs. The deck was not edited.
+
+**AI feedback given:** Link the six assignment items through the question of how a platform report becomes information Sony can trust and act on. Test an initial canonical core against real data rather than promising an exhaustive model; prioritize feasible intake methods; make corrections auditable; preserve role-specific needs after normalization; include consumers and support in discovery and the pilot; use quality, freshness, resolution, and adoption alongside ROI.
+
+**Time:** Timestamp is a wall-clock marker only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 18 — 2026-10-07 21:55 EDT — Claude's roles in the proposed workflow
+
+**Candidate prompt (verbatim):**
+> Claude models can both build the deterministic solution for data ingestion AND serve as an agentic backup for exceptions and reporting.
+
+**Candidate direction (recorded):** Use Claude in two places: to help build the repeatable ingestion path, and as an operational fallback for exceptions and reporting questions.
+
+**Steps taken:** Codex added this distinction to `docs/future-state-notes.md` and `docs/presentation-story-notes.md`. It interpreted the routine path as reviewed deterministic code and the fallback as evidence-grounded agent assistance with human review for uncertain or sensitive results. No slide files were edited.
+
+**Time:** Timestamp is a wall-clock marker only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 19 — 2026-10-07 22:04–22:15 EDT — Status review; feedback against the brief; support-ticket design
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> ok take a look at the assignment and the progress so far and summarize the status
+
+> befre we proceed ca you sumarize my presentation as you understand it
+
+> ok great give me feedback, compare it to the prompt, what do you think of my thoughts and how i have answered the request
+
+> ok re support tickets, that's a seprate build, but we'll handle that agenticly--whatever the agent can answer or resolve it will and anything that requires a human the agent will route to the right person.  Tickets all route through an agent first, and we can compare resolution time and CSAT from before and after
+
+**Status found:** Draft 1 deck (14:01) and the candidate's revised answers (Turn 17, 21:42) have diverged. Notes files hold the new framing; slides still carry the old one. Time ledger empty; slide 5 disclosure still reads "[__] hours". Published log at tomleger.dev is behind the repo (Turns 16–18 not live). 24-hour window closes about noon 2026-10-08.
+
+**AI feedback given, against the brief:**
+- Strongest answers: standardize/tailor boundary ("tailored before ingestion, uniform after"; "a self-portrait in json"), a human owner per source including APIs, discovery as a time study for the ROI baseline, business case before build, two roles for Claude.
+- Gaps: support/ticket side (brief's Problem 2) barely answered; diagnosis point 3 is a design requirement rather than a testable hypothesis; discovery engages only source owners, dropping Draft 1's consumer round and ticket sample; "input path is trivial" and "exhaustive data model" run against the brief's stated constraints; pilot defers all stakeholder value until every source is integrated and cannot measure visibility or support resolution; success measures cover manual work only; risks, tradeoffs, and sequencing have no slide.
+
+**Candidate direction (recorded):** Support is a separate build, handled agentically. All tickets route through an agent first. The agent resolves what it can and routes the rest to the right person. Measure resolution time and CSAT before and after.
+
+**AI feedback on the support design:**
+1. Routing presupposes an ownership map (source → owner, issue type → owner, escalation path). The source registry from the data build is that map; the two builds share one standard.
+2. Define the agent's autonomy boundary: status, definitions, and "where is my data" fully automated; anything changing data, touching a claim or match, or involving a partner drafted for human approval; every agent action logged for the auditable history rights teams need.
+3. CSAT has no baseline today; add a short survey to the ticket-sample round of discovery. Resolution time can be reconstructed from ticket exports.
+4. Position the agent as a front door inside existing channels (Slack, email, current ticketing tools), writing back to each team's tool, to answer the brief's "another disconnected system" concern.
+5. Severity rules are a human decision and a discovery output; the agent applies them.
+6. Added measures: share of tickets arriving complete; share resolved without a human; watch deflection against CSAT.
+7. Sequencing: include a minimal status-answering agent in the first pilot; it is cheap and the only way to measure the visibility outcome.
+8. For the deck: diagnosis point 3 becomes "issues routed by memory, arrive without context, nobody owns them end to end"; slide 3 gets a support lane parallel to the data lane, sharing the registry.
+
+**Files changed:** this log only. Deck not edited.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 20 — 2026-10-07 22:20 EDT — Hypothesis 3 clarified; "finite integrations, not a universal tool"
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> idk what you mean by this "2. Diagnosis point three is a requirement, not a hypothesis. ..."
+
+> ok lets put a pin in that for now. but good point. I wanted to say that I'm not building a UNIVERSAL tool i am building multiple integrations. There aren't infinity integrations! In fact there are only equal or fewer integrations than we have data/workflow owners.
+
+**AI explanation given:** Q1 asks for hypotheses discovery could prove wrong. "Data is messier than anyone realizes" and "no shared song identifier across platforms" are testable. "Output must serve all stakeholders as one product" is a design intent, not a claim about the present, and belongs in the future-state answer. Suggested testable replacement on the support side: issues arrive without context, are routed by memory, and nobody owns them end to end; tested by the ticket sample. Alternative if the unified-product idea stays: "teams cannot get the view they need, so they build their own trackers."
+
+**Candidate decision (recorded):** Pinned; not yet decided.
+
+**Candidate direction (recorded):** Not a universal ingestion tool. A finite set of integrations, bounded by the number of data/workflow owners.
+
+**AI feedback given:** This directly answers the brief's "a single universal method may not be realistic" constraint and replaces the weaker "input path is trivial" claim. Bound is per source rather than per owner; discovery's inventory gives the count. Many sources share a delivery method, so the work is a few intake adapters plus one parser per source shape. Each integration still carries cost, but a countable list lets the business case state cost per integration against hours saved. Suggested slide wording: "Not one universal pipe. A finite set of integrations, counted in discovery, built once each, each with a named owner."
+
+**Files changed:** this log only.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 21 — 2026-10-07 22:30 EDT — Providers vs. consumers; history as integrations; measures expanded; tradeoffs and risks
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> Discovery engages one audience. -- re this, good point -- ok lets keep in mind that we have data providers and data consumers. we are going to build initial pilot for data providers first and then next phase is data consumers.  We cant do ANYTHING for ANY CONSUMERS until we have ingested a complete dataset
+>
+> 5 - we will treat historical data models as early versions/ alternate integrations. Once the contemporary data is normalized and the historical data is normalized, inconsistencies are made irrelevent.
+> 6 The pilot defers all stakeholder value to the end.--you're right about this. Aside from leadership i really dont know if i think involving those stakeholders early is a benefit other than visiblity theater. I'm really torn. But I am open to that if i need to be.
+>
+> 7. 7. Success measures only cover manual work. yes good point please expand this we might not have CSAT but we have resolution time and quality so we surely have enough before data to measure improvement.
+>
+> Ok Tradeoffs  - id what features Airtable offers us in terms of usability and visualization, it might be kind of limiting, however it is a solid platform that is already a known quantity, maybe we can use it as a backend? idk. Alternative would be to build a stand alone custom intranet site.
+> RISKS: Requires buy in from stakeholers who are used to doing things a certain way; we could find out there are more data inconsistencies than anyone anticipated, causing delays in decisions about the uniform data model.
+> If we suddenly lost access to frotier AI, this project would take a lot longer. idk what are some other risks. Hm...engineering might not want to allocate resources ? While we can use airtable as a db, we need a server to run server functions to transform the data.
+
+**Candidate decisions (recorded):**
+- Two audiences: data providers and data consumers. Pilot builds for providers first; consumers are the next phase. Nothing is built for consumers until a complete dataset is ingested.
+- Historical data models are treated as early versions / alternate integrations; once normalized, inconsistencies become irrelevant.
+- Torn on early consumer involvement (sees it as visibility theater, leadership excepted); open to it if needed.
+- Success measures: expand beyond ROI; resolution time and quality are available as baselines even without CSAT.
+- Tradeoff under consideration: Airtable as backend vs. a standalone custom intranet site.
+- Risks named: stakeholder buy-in; more inconsistency than anticipated delaying the data model; loss of frontier AI access; engineering declining resources; need for a server to run transforms.
+
+**AI feedback given:**
+- Providers/consumers: agree on build order. Consumers should still be interviewed in discovery because they define what the model must answer; status/coverage visibility for leadership is nearly free from the registry. Rule proposed: "consumers inform the model in discovery, providers test it in the pilot."
+- History: good framing; each historical shape is a parser with a cost; old rows carry nulls or lower-confidence flags; meaning changes recorded in the data dictionary; backfill only as deep as a consumer needs.
+- Early involvement: narrow version justified by (a) consumers define the model, (b) the brief assesses stakeholder partnership, (c) visibility and support-resolution outcomes cannot be measured without a consumer. Proposed: consumers in discovery, leadership status view, one consumer reviews the first role view at the end of the provider phase.
+- Measures table expanded to seven outcomes (manual work, data delivery, data quality, visibility, support resolution, adoption, cost), each with baseline source and after source. Reopen rate as CSAT stand-in; start collecting one-click CSAT in the pilot; fallback rate per source as cost line and parser signal.
+- Airtable vs. custom: split by role. Airtable as control plane (registry, intake forms, exceptions queue, automations, owner interfaces, permissions); warehouse for usage data; existing BI for consumer analytics (which BI is a discovery question); custom limited to a small transform/agent service. Standalone intranet is the maximum engineering ask and the "disconnected system" the brief warns about. Same split as Turn 5.
+- Risks: candidate's five with mitigations, plus sensitive data under a permission mistake, partner terms on portal automation, key-person dependency on the candidate, agent errors eroding trust, scope creep after consumers see data, shadow trackers surviving, historical backfill ballooning. Loss-of-AI risk reframed: deterministic path runs without a model; exposure is build speed, not operability.
+
+**Files changed:** this log only. Deck not edited.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 22 — 2026-10-07 22:40 EDT — Why a deck opens with hypotheses
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> whats the purpose of starting a deck with a list of initial problems or hypothesis? talk to me like i'm in business school
+
+**AI explanation given:** Hypothesis-driven method: in an ambiguous problem with scarce time, a hypothesis is a bet about where the damage is, stated up front so discovery tests it rather than cataloguing everything. A falsifiable claim shows judgment; an unfalsifiable one shows nothing. Choosing three is an act of prioritization, which the brief says it is assessing. The hypotheses are the spine: discovery tests them, future state assumes they hold, pilot is the cheapest confirming experiment, measures check the fix against the named problem. The live interview will pivot assumptions, so stated hypotheses are what the candidate pivots from. Pyramid Principle framing: answer first, three legs under it. Restated why hypothesis 3 ("output must serve everyone as one product") is a leg of the solution rather than the diagnosis.
+
+**Files changed:** this log only.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 23 — 2026-10-07 22:50 EDT — Thesis agreed; support hypothesis for H3; MBA framing
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> ok  i agree with this: the organization cannot trust, compare, or act on its UGC data, and the fix is a finite set of owned integrations feeding one opinionated model.--lets talk about going with the support hypothesis for number three. Is this case study assignment a standard form that. might encounter in MBA program and if so in which course
+
+**Candidate decision (recorded):** Thesis sentence agreed: "The organization cannot trust, compare, or act on its UGC data, and the fix is a finite set of owned integrations feeding one opinionated model." Open to the support hypothesis as H3; discussing.
+
+**AI proposal for H3 (pending candidate acceptance):** "When data is late or wrong, no one owns getting it fixed. Issues arrive without the details needed to investigate, get routed by whoever remembers who handles what, and the person who raised them cannot see status." Tested by a ticket sample across all channels scored on completeness on arrival, routing hops, time to close, reopen rate, and end-to-end ownership. Falsified if the sample shows clean, single-owner, fast resolution. Maps the three hypotheses onto trust / compare / act; gives slide 3 a support lane sharing the registry; moves "unified product for all stakeholders" to the future-state consumer phase.
+
+**AI explanation on MBA form:** Take-home case format borrowed from consulting recruiting and the case method. Content closest to Operations Management (process analysis, standardization vs. customization, workflow redesign); the six-question arc mirrors DMAIC (Define, Measure, Analyze, Improve, Control). Supporting courses: MIS (data model, master data, governance), Organizational Behavior / Managing Change (adoption, buy-in, pilot selection), strategy consulting electives (hypothesis-driven method, Pyramid Principle). Reference: Minto, *The Pyramid Principle*.
+
+**Files changed:** this log only.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 24 — 2026-10-07 22:55 EDT — Support hypothesis accepted; Draft 2 outline options
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> ok go with the support hypothesis, start draft 2 --ok outline four slides, think about the six questions. Offer me two options that combine some of those questions and explain your reasoning. we wlll agree on a plan before building and then we will build one by one.
+
+**Candidate decisions (recorded):** H3 is the support hypothesis (Turn 23 wording). Draft 2 will have four slides. Plan to be agreed before building; slides built one at a time.
+
+**Steps taken:** Wrote `deck/draft-v2-outline.md` with two four-slide options. Option A follows the assignment order (Q1+Q2 / Q3+Q4 / Q5 / Q6). Option B is vision-then-roadmap (Q1 / Q3+Q4 / Q2+Q5 as a timeline / Q6). Claude recommended B: cleaner opener, roadmap slide makes the provider-then-consumer phasing visible and answers the brief's sequencing ask, four slides read as one argument. Fixed placements listed for either option. Open items before building listed. No slides built.
+
+**Files changed:** `deck/draft-v2-outline.md` (new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 25 — 2026-10-07 23:05 EDT — Option B chosen; Draft 2 slide 1 built
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> I like option B much better please proceed
+
+**Candidate decision (recorded):** Draft 2 follows Option B: slide 1 diagnosis (Q1); slide 2 design (Q3+Q4); slide 3 roadmap (Q2+Q5 as a timeline); slide 4 measures, business case, risks, disclosure (Q6).
+
+**Steps taken:**
+1. Created a new private Slides artifact for Draft 2 at https://claude.ai/artifact/SvHjAncWFh1WifWzwoqX3h, leaving Draft 1 intact.
+2. Wrote `deck/draft-v2-src/project/deck.json` naming all four slide ids and four outline sections; same typefaces and palette as Draft 1 (Domine, Public Sans; navy, off-white, orange accent).
+3. Built slide 1 (`deck/draft-v2-src/project/slides/diagnosis.html`): eyebrow with candidate name; headline "We cannot yet trust, compare, or act on UGC data"; one-line fix; three cards (Trust, Compare, Act) each with a short hypothesis, one line of support, and a test tag (sample and reconcile; identifier inventory; ticket sample); assumptions row; speaker notes carrying the full thesis, each hypothesis's evidence, test, and what failure would mean.
+4. Slides 2–4 not yet built; to be built one at a time after review.
+
+**Files changed:** `deck/draft-v2-src/project/deck.json` (new), `deck/draft-v2-src/project/slides/diagnosis.html` (new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 26 — 2026-10-07 23:20 EDT — Slide conventions received; Draft 2 slide 2 built
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> ok go build slide 2 keep in mind here are some guidelines:
+
+Followed by pasted slide conventions (summarized): action titles as full-sentence takeaways of at most two lines; the four titles read in order should tell the whole story; the body proves the title; one message per slide; a footnote line for assumptions and sources; consistent grid, title position, fonts, and one accent color meaning "this is the point"; a small set of layouts (table or matrix, process or flow, before/after, 2×2, chart, roadmap, scorecard, text with takeaway box).
+
+**Candidate direction (recorded):** Apply these conventions to Draft 2 from slide 2 onward.
+
+**Steps taken:** Built slide 2 (`deck/draft-v2-src/project/slides/design.html`) as a process-flow slide. Action title: "Meet each source where it is, then hold everything to one opinionated model." Five stages (Sources, Integration | One model, Views, Support) split by a single orange vertical bar marking where standardization begins; the orange accent is used only for that boundary and the "standard" side. Under each group, one line listing what is tailored (delivery method, platform fields, contract and regional rules, owner's workflow) and what is standard (identifiers and definitions, minimum intake fields, status labels, one owner per source, access and audit rules). Footnote carries the tradeoff: Airtable for registry, intake, owner views; warehouse for usage data; existing BI for analytics; portal automation only after asking for API or SFTP. Speaker notes carry finite integrations, canonical core, history as integrations, the two Claude roles, the support lane sharing the registry, audit logging, and the Airtable-versus-intranet reasoning.
+
+**Note for slide 1:** its headline is a claim but not yet an action-title sentence in the pasted sense, and its assumptions sit in pills rather than a footnote line. To revisit after slides 3 and 4 so all four titles read as one story.
+
+**Files changed:** `deck/draft-v2-src/project/slides/design.html` (new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 27 — 2026-10-07 23:35 EDT — Slide 1 revised to the conventions; slide 3 built
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> do you think you should revise slide 1 per the conventiosn i just shared
+
+> please do
+
+**AI assessment given:** Slide 1 broke three conventions: a second message (the "fix" line duplicating slide 2's title), assumptions in body pills rather than a footnote line, and a title size and position that did not match slide 2. It passed on action title, body proving the title, single accent meaning, and layout kind (three cards kept over a table to hold word count down).
+
+**Candidate decision (recorded):** Make the three edits and build slide 3.
+
+**Steps taken:**
+1. Slide 1: removed the fix line; title set to 56px at the same position as slide 2; assumptions moved to a muted footnote line above the footer, matching slide 2's footnote treatment.
+2. Slide 3 (`deck/draft-v2-src/project/slides/roadmap.html`) built as a three-column timeline with two orange gate diamonds. Action title: "Discover with both audiences, then build for providers before consumers." Columns: Discovery (providers and consumers; inventory, owner workflow and time study, one consumer per audience, ticket sample; produces baseline hours, integration count, business case), Pilot phase 1 Providers (gate: business case approved; simplest API feed first with its owner; then one source at a time, first manual source where the owner wants it gone; status agent answers "is it current?" and leadership sees coverage; exit per source: three clean cycles, old process retired), Pilot phase 2 Consumers (gate: live dataset complete; one consumer reviews the first role view then one per audience; support agent adds routing and drafted fixes in existing tools; history backfilled as deep as a consumer needs; results against the baseline). Footnote: assumption that the simplest API feed goes first; participants; durations set after discovery. Speaker notes carry the full discovery question set from Turn 17, which hypothesis each round tests, information needed, the reasoning for providers first, and the two open items.
+
+**Assumption taken without a candidate answer:** first source is the simplest API feed (Turn 17); the "where the energy is" criterion (Turn 10) is applied to the first manual source instead. Consumer involvement in phase 1 is the narrow version proposed in Turn 21 (leadership status view; one consumer reviews the first role view at the gate), flagged in notes as still open.
+
+**Title test so far:** "We cannot yet trust, compare, or act on UGC data." / "Meet each source where it is, then hold everything to one opinionated model." / "Discover with both audiences, then build for providers before consumers."
+
+**Files changed:** `deck/draft-v2-src/project/slides/diagnosis.html`, `deck/draft-v2-src/project/slides/roadmap.html` (new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 28 — 2026-10-07 23:50 EDT — Slide 4 built; Draft 2 complete
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> ok go build slide 4
+
+**Steps taken:** Built slide 4 (`deck/draft-v2-src/project/slides/measures.html`) as a scorecard. Action title: "Expand only if the pilot beats its discovery baseline and pays back in months." Table with one row per outcome (manual work, data delivery, data quality, visibility, support resolution, adoption, cost and payback), each with its metric, the discovery round that supplies the baseline, and a pilot target stated as a direction, with payback months left as a placeholder. ROI folded into the last row so the slide carries one message. Risks as a footnote line (owners resist change; more inconsistency than expected; engineering declines the hosting ask; losing frontier AI slows the build, not the running system; sensitive data in a new surface), with the full list and mitigations in speaker notes. Footer carries the AI disclosure naming Claude Code (Anthropic) and Codex (OpenAI), an hours placeholder, and the prompt-log link. Speaker notes carry the ROI formula, reopen rate as the CSAT stand-in, fallback rate per source, the stop rule, all twelve risks with mitigations, and the disclosure detail.
+
+**Draft 2 title test:** "We cannot yet trust, compare, or act on UGC data." / "Meet each source where it is, then hold everything to one opinionated model." / "Discover with both audiences, then build for providers before consumers." / "Expand only if the pilot beats its discovery baseline and pays back in months."
+
+**Placeholders remaining in the deck:** payback months target (slide 4 table); AI hours (slide 4 footer, from the time ledger); "Draft 2 · not for submission" labels on every slide, to be removed at submission.
+
+**Files changed:** `deck/draft-v2-src/project/slides/measures.html` (new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 29 — 2026-10-08 00:05 EDT — Pilot vs. rollout: zoom level corrected on slides 3 and 4
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> what would expansion be exactly
+
+> if we are building all integrations before building all views can you call that a pilot? i guess im confused about the zoom level
+
+> ok go
+
+**Candidate observation (recorded):** Phase 1 "all integrations" followed by phase 2 "all views" is the whole program, not a pilot. The Turn 17 pilot answer described the rollout order and called it the pilot.
+
+**AI assessment given:** Three zoom levels. Pilot: a thin vertical slice through the whole chain (one API source, one manual source, their owners, registry with status, a status agent, a leadership coverage view, one consumer view the pilot's data can serve, minimal issue intake), sized so every scorecard row gets an after-measure. Rollout: horizontal expansion, providers before consumers (remaining integrations one at a time with the exit rule, views per audience once the dataset is complete, full support agent, backfill, retire old processes). Steady state: operations. The candidate's "providers before consumers" rule is the rollout order; the API-first instinct survives inside the pilot. "Expansion" on slide 4 means funding the rollout: remaining sources, every consumer view, the full support agent, an operating budget; decided at the end of the pilot once every row has an after-measure.
+
+**Candidate decision (recorded):** Make the edits.
+
+**Steps taken:**
+1. Slide 3 rebuilt as Discovery / Pilot · one thin slice / Rollout · providers first. Title: "Pilot a thin slice through the whole chain, then roll out providers before consumers." Pilot column: one API source then one manual source whose owner wants it gone; registry with status and an agent answering "is it current?"; leadership coverage view, one consumer view, one issue intake; produces an after-measure for every scorecard row. Rollout column, gated on the pilot beating its baseline: remaining sources one at a time with exit on three clean cycles; views per audience once the dataset is complete; full support agent in existing tools and history backfilled as needed; produces old processes and shadow trackers retired. Notes rewritten for the three zoom levels; discovery question set retained.
+2. Slide 4 title: "Fund the rollout only if the pilot beats its baseline and pays back in months." Footnote now defines rollout before the risks. Notes state when the rollout decision is made and what it funds.
+
+**Title test:** "We cannot yet trust, compare, or act on UGC data." / "Meet each source where it is, then hold everything to one opinionated model." / "Pilot a thin slice through the whole chain, then roll out providers before consumers." / "Fund the rollout only if the pilot beats its baseline and pays back in months."
+
+**Files changed:** `deck/draft-v2-src/project/slides/roadmap.html`, `deck/draft-v2-src/project/slides/measures.html`, this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 30 — 2026-10-08 00:15 EDT — What a rights exceptions view is
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> what is a rights exceptions view
+
+**AI explanation given:** The work queue of records the integration could not confidently match to a Sony recording or artist (unknown platform ID, ambiguous metadata, two plausible works, a missing expected claim, duplicates). Each row carries the platform identifier and metadata as received, best-guess match and confidence, reason flagged, owner, status, and the resolution with who, what, when, and why. Rights users confirm, reject, reassign, escalate, or mark as not ours; every action is logged, giving the auditable resolution history the brief names; recurring patterns become new matching rules. Fits the pilot because it is useful with one platform's data, exercises the Compare and Act hypotheses, serves an audience the brief names, and is the registry's Exceptions table from Turn 5 surfaced as a view. Assumption: the pilot's API source carries matching or claim data; if not, the pilot's consumer view would be the source owner's delivery and quality view or a single-platform performance view for one label contact. Remains open until the inventory shows what the first source contains.
+
+**Files changed:** this log only.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 31 — 2026-10-08 00:30 EDT — Draft 3: Sony Music visual language, Helvetica Neue
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> ok lets revise the whole deck i want a new version dont delet this one but lets use this set of brand identity guidelines:
+
+Followed by a pasted brand brief (summarized): make the deck feel visually native to Sony Music's public 2025 presentation without presenting as an official Sony template; SST or Helvetica Neue; large bold italic sans-serif titles upper-left; dark charcoal content slides with white type, a subtle dot texture, a thin header rule, and an empty upper-right logo zone; red for selective emphasis (F90000 as an approximate match, not an official value), cyan as secondary accent, yellow and green only for data categories; light cover with a large black title and one diagonal red-to-pink gradient; one idea per slide; no invented logos; no generic cards, drop shadows, or clip-art.
+
+> i have helvetica neue on this machine please use it
+> (with the folder /Users/tom/Downloads/helvetica-neue-5/ attached)
+
+**Candidate decisions (recorded):** Draft 3 is a new deck; Draft 2 is kept untouched. Typeface is Helvetica Neue from the candidate's own files.
+
+**Steps taken:**
+1. Created a new private Slides artifact for Draft 3 at https://claude.ai/artifact/Y6rpN4yW1w8B3qBiwaFjfd. Source in `deck/draft-v3-src/`.
+2. Uploaded four static cuts as deck assets: Roman (body), Bold (labels, key lines, table values), Bold Italic (slide titles), Heavy (cover title). The deck format allows four faces, one file each; every bold or italic in the slides names its cut explicitly with normal weight and style so nothing is browser-synthesized. Inline bold lead-ins ("Tested by", "Produces", "Assumptions", "Tradeoff", "Rollout", "Risks", "In the room") were restructured as a Bold label beside Roman text for the same reason.
+3. Five slides: a light cover (off-white field, large black Heavy title "UGC data and support workflow", a diagonal red-to-pink gradient on the right, tracked "Candidate submission" label, candidate name; no logo, no "MUSIC" wordmark) and four near-black content slides with a fine dot texture, a tracked section label, a thin header rule, a bold italic title, and a small footer. Content and titles carried over from Draft 2's final state: diagnosis as three ruled columns with red on the three title words; future state as a five-node flow with a red vertical bar where standardization begins and cyan nodes on the standard side; roadmap as three segments with cyan gate diamonds and a red bar on the pilot; measures as a dark scorecard with cyan baseline sources and the payback placeholder in red. Footnotes carry assumptions, the Airtable tradeoff, participants, the rollout definition, and risks; the AI disclosure and log link sit in the last slide's footer.
+4. Color values are approximations of the public presentation, not Sony specifications. The upper-right logo zone is left empty.
+
+**Files changed:** `deck/draft-v3-src/project/deck.json`, `deck/draft-v3-src/project/slides/{cover,diagnosis,design,roadmap,measures}.html` (all new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 32 — 2026-10-08 00:55 EDT — Cover removed, discovery slide added, second-reviewer feedback triaged
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> "$100/hr loaded rate, applied to build time and hours saved." That's neutral, not about you, and makes the payback math readable. Update the slide 5 speaker notes too, which still say "cost is my hours at $100."
+>
+> delete the title slide and lets add a discovery slide
+>
+> * Given: Claude Cowork and Airtable are rolling out company-wide.
+> * Assumed: Business Solutions builds, Engineering hosts and reviews (if they told you this too, move it up to "Given"), $100/hr loaded rate.
+>
+> Another claude sessions says "
+
+Followed by a pasted review from a second Claude session (summarized): (1) discovery lives mostly in speaker notes; (2) hypotheses read as findings; (3) the deck drifts into architecture; (4) check the assumptions and depersonalize the $100/hr; (5) scorecard targets are not targets yet; (6) prioritization and "why this pilot" are missing from the slides; (7) escalation routes belong on the tailored side, double numbering, red does several jobs.
+
+> what say you about next steps?
+
+**Candidate decisions (recorded):** Rate wording is "$100/hr loaded rate, applied to build time and hours saved." Cover slide removed. Discovery gets its own slide. Assumptions split into Given (Cowork and Airtable rolling out) and Assumed (build/host split; the rate).
+
+**AI assessment of the seven points:** 1 agree, addressed by the new slide. 2 half agree: add a "Working hypotheses" kicker, do not hedge the card copy. 3 mostly agree: Airtable stays because it is a Given and the brief rewards use of existing technology; implementation vocabulary lifted to capability language, detail kept in notes. 4 answered by the candidate's split. 5 agree; proposed illustrative thresholds for the candidate to adjust (hours per cycle down 30% on pilot sources; 90% of deliveries in window; exceptions per cycle halved; status questions halved; time to close halved with every ticket complete on arrival; every pilot owner on the new path with the old process retired; payback under 12 months); not applied pending the candidate's call. 6 agree: "why" lines added to the pilot slide; hypothesis priority stated as the dependency order in notes. 7a and 7b applied; 7c declined: one red per slide marking that slide's point follows the brand brief's "selective emphasis."
+
+**Steps taken:**
+1. Removed `cover.html`; deck is now five content slides. Heavy face dropped from the index (asset retained).
+2. New slide 2, Discovery (`discovery.html`): title "Test each hypothesis against the people and records that would prove it wrong." A matrix with one row per hypothesis: who I'd engage, what I'd ask, what I'd need, confirmed if. Footnote: every interview also times the work (the ROI baseline); consumers define what the model must answer; discovery ends in a go or no-go.
+3. Slide 1: kicker "UGC data and support workflow · Working hypotheses"; footnote split into Given and Assumed with the new rate wording; notes updated, including priority as dependency order.
+4. Slide 3: section label without number; node 2 reads "Rules first, agent for exceptions, human approves"; escalation routes added to the tailored list; tradeoff restated as an approach line ("build on tools already rolling out, Airtable for the registry and intake, with the existing warehouse and BI... Ask partners for a feed before automating any portal"); notes carry the escalation point.
+5. Slide 4 rebuilt as two columns, Pilot and Rollout, each with a "Why" line (a willing owner, a manual source where saved hours show up, the smallest build that measures all four outcomes; cross-platform views need the complete dataset, retiring each old process locks in the saving).
+6. Slide 5: section label without number; cost row reads "Build and run cost vs. hours saved × loaded rate"; risk reads "limited engineering capacity"; notes depersonalized to the loaded rate.
+
+**Files changed:** `deck/draft-v3-src/project/deck.json`, `discovery.html` (new), `cover.html` (removed), `diagnosis.html`, `design.html`, `roadmap.html`, `measures.html`, this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 33 — 2026-10-08 01:25 EDT — Draft 4: discovery slide removed, 1970s Swiss redesign
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> no i hate the discovery slide remove it and redo the design from the ground up i want something like 1970s swiss style white or off white background etc
+
+**Candidate decisions (recorded):** Discovery slide removed; Q2 returns to the "Tested by" lines on slide 1 and a Discovery column on the pilot slide. Design restarted in the International Typographic Style of the 1970s on an off-white ground.
+
+**Steps taken:**
+1. Created a new private Slides artifact for Draft 4 at https://claude.ai/artifact/VgTgoedrV3iSAS73wTVF5V, leaving Draft 3 intact. Source in `deck/draft-v4-src/`. Roman and Bold cuts of Helvetica Neue copied server-side from Draft 3's assets; Bold Italic and Heavy dropped.
+2. Design system: warm off-white ground (#F4F3EE), near-black type (#111111), secondary text (#4A4A4A), one red (#F90000). A full-width black band across the top carrying the deck name and the candidate line. A 3px rule, a numbered section line, a 64px Bold sentence-case title flush left with tight leading. Body in a column grid with 1px hairlines; large Bold numerals in place of circles; thick black bars as timeline segments. No texture, gradient, radius, shadow, or icon. Red once per slide: the three title words, the 4px standardization rule, the pilot bar, a 16px square beside the payback figure. Footer: month left, page number right, hairline above the footnote block.
+3. Four slides with Draft 3's content and titles: diagnosis (three ruled columns, numerals 1–3, Tested by lines, Given and Assumed footnote); future state (five numbered columns split by the red rule, tailored and standard lists, Approach footnote); discovery, pilot, rollout (three columns with black, red, black bars, gate labels, three lines each, a Produces line for discovery and a Why line for pilot and rollout, Assumption and In the room footnote); measures (ruled scorecard, red square beside the payback placeholder, Rollout and Risks footnote, AI disclosure in the footer).
+
+**Files changed:** `deck/draft-v4-src/project/deck.json`, `deck/draft-v4-src/project/slides/{diagnosis,design,roadmap,measures}.html` (all new), this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
