@@ -5,22 +5,10 @@
 **Tool disclosure (standing):**
 - **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1
 - **Role of the tool:** repo setup, note-taking, structuring, drafting, and slide production under the candidate's direction. All diagnoses, prioritization, and tradeoff decisions are reviewed and owned by the candidate.
-- **Later program:** Codex desktop app (OpenAI), used for repo review, explaining the draft, and compiling future-state notes. Its time must be included in the candidate's final AI-use total.
+- **Later program:** Codex desktop app (OpenAI), used for repo review, explaining the draft, and compiling future-state notes. Its prompts are recorded in Turn 16.
 - **Other tools:** GitHub (private repo via `gh` CLI), Python `pypdf` (PDF text extraction)
 
-**Time tracking:** Timestamps on each turn are wall-clock markers only; they do not measure working time, since turns are spread across a day of other work. The brief asks for time allotted to AI tools, so the candidate records actual sittings in the ledger below and totals them at submission. No time is estimated by the AI.
-
-### Time ledger (filled in by the candidate)
-
-| Date | Start | End | Minutes | What |
-|---|---|---|---|---|
-| 2026-10-07 | | | | Setup, brief intake, hypotheses discussion |
-| 2026-10-07 | | | | Discovery, future state, pilot, measures discussion |
-| 2026-10-07 | | | | Draft 1 review |
-| 2026-10-07 | | | | Codex project review and future-state notes |
-| | | | | |
-
-**Total active time with AI tools:** ___ hours (enter at submission)
+**Time:** Timestamps on each turn are wall-clock markers only; they do not measure working time, since turns were spread across days of other work. No elapsed time was calculated or estimated. This log records timestamps and prompts.
 
 ---
 
@@ -337,7 +325,7 @@ Mid-turn, after seeing slide 1:
 
 **AI suggestions for review:** Surface source freshness and quality, alert owners to late or failed feeds, map shared identifiers and definitions for comparison, connect charts to underlying records, keep answers grounded in permitted data with source context, prefill and route tickets through an existing support workflow, and capture recurring fixes in runbooks. These are proposed additions, not yet candidate-approved slide content.
 
-**Time:** This timestamp is a wall-clock marker, not time spent. Candidate to enter active time in the ledger.
+**Time:** This timestamp is a wall-clock marker, not time spent. No elapsed time was calculated.
 
 ---
 
@@ -376,7 +364,7 @@ Mid-turn, after seeing slide 1:
 
 **AI feedback given:** Link the six assignment items through the question of how a platform report becomes information Sony can trust and act on. Test an initial canonical core against real data rather than promising an exhaustive model; prioritize feasible intake methods; make corrections auditable; preserve role-specific needs after normalization; include consumers and support in discovery and the pilot; use quality, freshness, resolution, and adoption alongside ROI.
 
-**Time:** Timestamp is a wall-clock marker only. Candidate to enter active time in the ledger.
+**Time:** Timestamp is a wall-clock marker only. No elapsed time was calculated.
 
 ---
 
@@ -389,7 +377,7 @@ Mid-turn, after seeing slide 1:
 
 **Steps taken:** Codex added this distinction to `docs/future-state-notes.md` and `docs/presentation-story-notes.md`. It interpreted the routine path as reviewed deterministic code and the fallback as evidence-grounded agent assistance with human review for uncertain or sensitive results. No slide files were edited.
 
-**Time:** Timestamp is a wall-clock marker only. Candidate to enter active time in the ledger.
+**Time:** Timestamp is a wall-clock marker only. No elapsed time was calculated.
 
 ---
 
@@ -426,7 +414,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** this log only. Deck not edited.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -449,7 +437,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** this log only.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -487,7 +475,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** this log only. Deck not edited.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -502,7 +490,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** this log only.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -521,7 +509,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** this log only.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -538,7 +526,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** `deck/draft-v2-outline.md` (new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -559,7 +547,7 @@ Mid-turn, after seeing slide 1:
 
 **Files changed:** `deck/draft-v2-src/project/deck.json` (new), `deck/draft-v2-src/project/slides/diagnosis.html` (new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -580,7 +568,7 @@ Followed by pasted slide conventions (summarized): action titles as full-sentenc
 
 **Files changed:** `deck/draft-v2-src/project/slides/design.html` (new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -607,7 +595,7 @@ Followed by pasted slide conventions (summarized): action titles as full-sentenc
 
 **Files changed:** `deck/draft-v2-src/project/slides/diagnosis.html`, `deck/draft-v2-src/project/slides/roadmap.html` (new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -626,7 +614,7 @@ Followed by pasted slide conventions (summarized): action titles as full-sentenc
 
 **Files changed:** `deck/draft-v2-src/project/slides/measures.html` (new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -655,7 +643,7 @@ Followed by pasted slide conventions (summarized): action titles as full-sentenc
 
 **Files changed:** `deck/draft-v2-src/project/slides/roadmap.html`, `deck/draft-v2-src/project/slides/measures.html`, this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -670,7 +658,7 @@ Followed by pasted slide conventions (summarized): action titles as full-sentenc
 
 **Files changed:** this log only.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -696,7 +684,7 @@ Followed by a pasted brand brief (summarized): make the deck feel visually nativ
 
 **Files changed:** `deck/draft-v3-src/project/deck.json`, `deck/draft-v3-src/project/slides/{cover,diagnosis,design,roadmap,measures}.html` (all new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -732,7 +720,7 @@ Followed by a pasted review from a second Claude session (summarized): (1) disco
 
 **Files changed:** `deck/draft-v3-src/project/deck.json`, `discovery.html` (new), `cover.html` (removed), `diagnosis.html`, `design.html`, `roadmap.html`, `measures.html`, this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
@@ -752,24 +740,216 @@ Followed by a pasted review from a second Claude session (summarized): (1) disco
 
 **Files changed:** `deck/draft-v4-src/project/deck.json`, `deck/draft-v4-src/project/slides/{diagnosis,design,roadmap,measures}.html` (all new), this log.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
 
 ---
 
-## Turn 34 — 2026-10-08 09:05 EDT — Repo pushed; public log republished
+## Turn 34 — 2026-10-08 09:15–09:26 EDT — Pull, status catch-up, Draft 4 rendered to PDF
 
-**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
 **Candidate prompts (verbatim):**
-> push everythign to github
+> pull the latest from github
 
-> publish the log too
+> read the process log and catch me up on where things stand -- also convert deck v4 into PDF for printing
+
+> output the PDF with speaker notes please
 
 **Steps taken:**
-1. Pushed fifteen commits (Turns 19–33, Draft 2 outline, Draft 2–4 slide source) to github.com/legertom/ugc-dashboard.
-2. The publish script failed on first run: this machine is not the one Turns 14–15 ran on. It had no clone of the portfolio site at the expected path, and its system Python lacked the `markdown` module. Fixed by cloning `legertom/tomleger-portfolio` to `~/repo/tomleger-portfolio` and installing `markdown` for the user. The script then rendered, committed, and pushed; the site copy of the log matches the repo.
-3. Republished after this entry so the public log includes it.
+1. Pulled `origin/main` (fast-forward, 00d52f1 → ec125b0): Drafts 2–4 source, the Codex notes files, and log turns 16–33.
+2. Read the full log and reported status (see summary below). No judgment calls made on content.
+3. Wrote `scripts/render_deck_pdf.py`: assembles a draft's slides from `deck.json` order into one HTML document, maps the `Helvetica Neue Bold` face to the system font via `@font-face` with `local()`, scales each 1920×1080 slide to a 13.333in × 7.5in page (standard 16:9), and prints with headless Google Chrome. With `--notes`, each slide is followed by its `<aside>` speaker notes on a named page with margins; long notes flow across pages.
+4. Rendered `deck/draft-v4.pdf` (4 pages) and `deck/draft-v4-with-notes.pdf` (10 pages; slides 3 and 4 notes each span two pages). Verified by rasterizing every PDF page with Quartz and inspecting slides 1–4 and the notes continuation pages. Rendering matches the artifact: Helvetica Neue Roman and Bold, red accent once per slide, hairlines, footers.
 
-**Files changed:** this log.
+**Status summary given to the candidate:** Draft 4 is the current deck (four slides, 1970s Swiss style, Helvetica Neue, off-white ground). Deck still carries three placeholders: "Draft 4, not for submission" in every header band; "[__] months" payback target on slide 4; "[__] hrs" in the AI disclosure footer. Time ledger at the top of this log is still empty, so the hours figure cannot be filled. Published log at tomleger.dev is behind the repo (last published at turn 15). Submission window closes about noon today.
 
-**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+**Files changed:** `scripts/render_deck_pdf.py` (new), `deck/draft-v4.pdf` (new), `deck/draft-v4-with-notes.pdf` (new), this log. Not committed.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 35 — 2026-10-08 09:40 EDT — Draft 5 content pass: five slides, plain language, word counts
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim lead, pasted brief summarized):**
+> I'm revising the CONTENT of my Sony Music case-study deck (Senior Business Solutions Specialist take-home). Content only in this pass. Keep the existing styling; a separate layout pass comes later. The brief (case-study-brief.md) asks six questions. Each answer must be visible on the slides themselves, because reviewers will likely read a PDF without speaker notes.
+
+Followed by a pasted content brief (summarized): implement only the listed decisions, no new ideas or metrics; build on-slide wording from the existing speaker notes and mark anything else [NEW]; plain business language, no "opinionated model", "registry", "thin slice", "canonical core", "deterministic"; about 75 body words per slide, report counts, propose cuts and wait for approval before applying, never shrink type; rewrite notes in the candidate's voice; five slides in the brief's order with five fixed headlines; slide 2 is a new four-column discovery slide (inventory, providers, consumers, tickets) with an "Information needed" and "Ends in" band; slide 3 keeps its elements with plainer wording; slide 4 drops the discovery column, keeps the two gates, shows the rollout as a five-tier sequence from least human involvement to most, keeps "In the room", and the notes carry the tradeoff about not starting with the highest-value manual sources; slide 5 renames the target column, replaces the payback placeholder with the formula, lists risks vertically, and the footer carries tools, [HOURS], one representative prompt [PROMPT], and the log link; remove "Draft 4, not for submission"; list remaining placeholders.
+
+**Candidate decisions (recorded):** all of the above. Headlines fixed by the candidate. Rollout order is by delivery method, least human involvement first; the pilot still runs API then manual.
+
+**Steps taken:**
+1. Copied Draft 4 to `deck/draft-v5-src/` (Draft 4 left intact, its artifact untouched). Wrote the five slides, `deck.json` order and sections, page numbers 1/5 to 5/5, and first-person speaker notes. Font assets unchanged.
+2. Wrote `scripts/count_slide_words.py` (counts on-slide words excluding the header band, section marker, headline, footer, and notes). Counts at full specified content: slide 1 122, slide 2 139, slide 3 143, slide 4 120, slide 5 160. Every slide is over the 75-word cap, so per the candidate's rule the cuts were proposed and not applied.
+3. Rendered `deck/draft-v5-with-notes.pdf` as a proof. At full content, slides 2 and 5 overflow their footnote band; the cuts resolve it. The slide 5 target column was widened from 240px to 440px so the payback formula fits on three lines; flagged for the layout pass.
+4. Change log, [NEW] wording list, and open questions reported to the candidate in chat (also recorded here): [NEW] items are "One standard" as the slide 3 column heading (from the candidate's headline, replacing "One model"); "Rollout: least human involvement first" as the slide 4 column heading; "Time to close ↓" as the slide 5 support-resolution direction (replacing "Faster"). Not drawn from notes but supplied by the candidate: all five headlines, the rollout tiers, the formula, the tradeoff paragraph. Dropped without a candidate instruction: the slide 4 "Assumption" footnote ("durations set after discovery"); the slide 4 "Why" lines (content folded into the pilot bullets and the notes). Open: the consumer column has no "Tests" line because the brief for it named none; the one-line citation footer will not hold a real prompt.
+
+**Files changed:** `deck/draft-v5-src/project/deck.json`, `deck/draft-v5-src/project/slides/{diagnosis,discovery,design,roadmap,measures}.html` (all new), `scripts/count_slide_words.py` (new), `deck/draft-v5-with-notes.pdf` (new), this log. Not committed. Draft 5 not yet published as an artifact; that follows the cuts decision.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 36 — 2026-10-08 10:35 EDT — Draft 6: Swiss grid layout pass, overflow measured and reported
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim lead, pasted brief summarized):**
+> Redesign the LAYOUT of my 5-slide deck (diagnosis, discovery, design, roadmap, measures) in a strict 1970s Swiss / International Typographic Style. Think Müller-Brockmann and Vignelli's Unimark work. Goal: instantly legible when projected, with an obvious hierarchy. Keep the palette (#F4F3EE background, #111111 text, #F90000 accent) and Helvetica Neue regular + bold.
+
+Followed by a pasted layout brief (summarized): layout only, no wording changes; if something will not fit at the minimum sizes, report it and stop; 12-column grid, 128px margins, 32px gutters, 96px top margin, every element on column edges, spacing from 8/16/32/64/128 only, flush left; type scale (72px bold headline on columns 1–10, max two lines; 36px bold section heads; 26px body minimum; 18px uppercase labels; 20px footer; 96px numerals on slide 1, 64px elsewhere); gray only for the footer and the Baseline column; red marks one idea per slide; dot lists become vertical lists; labels never run into a sentence; 2px rules between zones; no black bar or deck title; numbered section marker; one-line footer; a slide-by-slide layout; and a verification list (render each slide, check overflow and orphans at full and 50% size, diff the visible text, confirm notes unchanged). One content exception: the payback formula becomes "Payback (months) = build cost ÷ (monthly hours saved × $100 − monthly run cost)".
+
+**Candidate decisions (recorded):** the grid, type scale, and slide-by-slide layouts above; the formula change.
+
+**Steps taken:**
+1. Built `deck/draft-v6-src/` from Draft 5's wording with `scripts/gen_draft6_layout.py` (Draft 5 left intact). Speaker notes copied byte-for-byte. CSS grid with `repeat(12, 1fr)` and 32px gaps, so every element lands on a column edge by construction.
+2. Verification tooling: `scripts/slide_shots.py` (1920×1080 and 960×540 PNG per slide via headless Chrome), `scripts/measure_slides.py` with `scripts/measure_slides.js` (in-browser measurement of column-edge alignment, horizontal overflow, headline line count, single-word last lines, and the bottom edge of every zone against a 960px content floor, which keeps 32px above the footer), `scripts/diff_slide_text.py` (word-level diff of visible text and a hash comparison of notes between drafts).
+3. Results: all five headlines hold two lines; no element off-grid; no horizontal overflow. Slides 1 and 4 fit exactly (bottom band ends at 960). Slide 2 overflows by 80px, slide 3 by 119px, slide 5 by 378px at 64px headline-to-content spacing; at the tightest 32px spacing the scale allows, still 48, 87, and 346px. Per the candidate's instruction nothing was cut or shrunk; the overflow is reported.
+4. Single-word last lines: 17 found; closed with non-breaking spaces in the slide markup only (notes untouched, verified by byte comparison). Re-measured: none remain.
+5. Text diff: visible-text differences are confined to the removed black bar and deck title, the numbered marker, the new footer, the "·" separators that became vertical lists, the "Payback" label, and the formula. Notes identical on all five slides.
+6. Renders saved to `deck/draft-v6-renders/` and sent to the candidate.
+
+**Layout choices the brief left open (flagged to the candidate):** the "Rollout" definition line on slide 5 was kept in the band because dropping it would be a wording change; the AI citation band is set at 20px; the half-heads on slide 3 are 18px labels; flow arrows sit in the gutters at the numerals' mid-height, crossing the red rule between boxes 2 and 3; the rollout numerals occupy column 7 with text in 8–12; table headers are 18px labels. The slide 5 notes still describe the old payback formula; left unchanged because notes were to stay identical.
+
+**Files changed:** `deck/draft-v6-src/project/{deck.json,slides/*.html}` (new), `deck/draft-v6-renders/*.png` (new), `scripts/gen_draft6_layout.py`, `scripts/slide_shots.py`, `scripts/measure_slides.py`, `scripts/measure_slides.js`, `scripts/diff_slide_text.py` (new), this log. Not committed. Not published as an artifact.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 37 — 2026-10-08 10:50 EDT — Draft 6: approved cuts and layout adjustments applied; slides 2 and 3 still over
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim lead, pasted brief summarized):**
+> Your measurements are exactly what I needed. Apply the following, which includes a few approved content cuts.
+
+Followed by a pasted brief (summarized). Approved content changes, and only these: slide 2 Consumers sentence becomes "One person per audience in the brief."; slide 5 drops the Rollout line; slide 5 risks become five short labels (Owner resistance, Hidden inconsistency, Engineering capacity, Losing AI access, Sensitive data); slide 5 header "Target (set from baseline)" becomes "Target"; slide 5 notes update the payback sentence to the new formula; slide 3 list items capitalized. Layout: floor stays at 960px; slide 3 loses the arrows, lists become compact wrapping runs of at most two lines with 32px between items, gap to the boxes closed; slide 4 tier numerals in a 48px box with 16px to the label; slide 5 table columns 1–2 / 3–7 / 8–10 / 11–12, all table text 24px, single-line rows with 16px vertical padding, then the Payback band, then the Risks row, and the AI citation replaces the left footer text on that slide. Verify: render all five, report each slide's distance from the floor, stop if anything is still over, no further cuts or shrinking.
+
+**Candidate decisions (recorded):** all of the above.
+
+**Steps taken:**
+1. Applied the six content changes and the layout changes in `scripts/gen_draft6_layout.py`; regenerated `deck/draft-v6-src/`. Text diff against Draft 5 shows exactly the approved changes plus chrome. Notes identical on slides 1–4; slide 5 notes differ in one sentence only: "Payback in months is build and run cost divided by monthly hours saved times the rate." became "Payback in months is build cost divided by the net monthly saving: monthly hours saved times the rate, minus the monthly run cost." The other 32 sentences are unchanged.
+2. First measurement: slide 2 over by 55px, slide 3 by 17px, slide 5 by 5px. The slide 5 overage came from label-column rows set to a 41px line box in Turn 36 to align label and body baselines. Replaced that with true baseline alignment on the band grid (`align-items: baseline`, label at its natural line height). No content or type size changed; label rows are 6px shorter deck-wide.
+3. Final measurement against the 960px floor: slide 1 ends at 960 (0); slide 2 ends at 1003.6 (43.6px below the floor); slide 3 ends at 977.1 (17.1px below); slide 4 ends at 960 (0); slide 5 ends at 953.5 (6.5px above). All headlines two lines; nothing off-grid; no horizontal overflow; no single-word last lines; slide 5 table rows all single-line; slide 5 footer one line with the placeholders. Stopped on slides 2 and 3 per instruction.
+4. Causes: slide 2's tallest column is now Providers (columns 3–5, 392px wide), where both quoted questions wrap to two lines. Slide 3's left list needs three lines in its given order at 26px in five columns (Delivery method · Platform fields / Contract and regional rules · Escalation routes / The owner’s workflow); the right list holds two lines.
+5. Options reported to the candidate, not applied: slide 2, widen Providers to columns 3–6 and narrow Consumers to 7–9 now that the Consumers sentence is short (both questions then fit one line each, saving 70px), or reduce the headline-to-content gap from 64px to 32px deck-wide (saves 32px, slide 2 still 12px over); slide 3, reorder the left list so it packs into two lines (a content-order change), or the 32px headline gap (fits with 15px to spare but the list stays three lines).
+
+**Files changed:** `scripts/gen_draft6_layout.py`, `scripts/measure_slides.js`, `deck/draft-v6-src/project/slides/*.html`, `deck/draft-v6-renders/*.png`, this log. Not committed. Not published as an artifact.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 38 — 2026-10-08 11:05 EDT — Draft 6: breathing room, slide 2 columns, slide 3 list reorder, capitalization; all five slides fit
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim lead, pasted brief summarized):**
+> Approved. Apply these fixes deck-wide, then render and verify.
+
+Followed by a pasted brief (summarized): headline 72px to 60px (line-height 1.0, letter-spacing −1.5px, columns 1–10, max two lines); top padding 96px to 64px; every slide's content to end at least 32px above the 960px floor; slide 2 columns Inventory 1–2, Providers 3–6, Consumers 7–9, Tickets 10–12; slide 3 lists reordered into two lines each ("Delivery method · Platform fields · Escalation routes" / "Contract and regional rules · The owner’s workflow"; "Identifiers and definitions · Minimum intake fields · Status labels" / "One owner per source · Access and audit rules") with gray separators and 16px each side, 8px between lines; capitalize the first word of any text that follows a label on its own line; verify by rendering, reporting each slide's end relative to 960px, and confirming no wording changed beyond the reorder and the capitalization.
+
+**Candidate decisions (recorded):** all of the above, including the slide 2 column change proposed in Turn 37.
+
+**Steps taken:**
+1. Applied the changes in `scripts/gen_draft6_layout.py` and regenerated `deck/draft-v6-src/`. The content floor for anchored bottom bands moved from 960 to 928 (section bottom padding 152px) so bands sit 32px above the old floor and 64px above the footer.
+2. Wording check against the Draft 6 version the candidate had just seen: slide 1 three capitalizations (Sampling, An, A); slide 2 six (The, Baseline, What, The, Sample, A); slide 3 the reorder with "·" separators and one capitalization (Build); slide 4 one (Source); slide 5 none. Notes unchanged on all five slides from the previous turn (slide 5 keeps the Turn 37 payback sentence).
+3. Measurement: slide 1 content ends at 928 (headline now one line at 60px); slides 2, 3, and 4 end at 928; slide 5 ends at 897.5. All at least 32px above 960. Headlines within two lines; nothing off-grid; no horizontal overflow. Slide 3 lists two lines each; slide 5 table rows single-line. Two single-word last lines introduced by the capitalization on slide 2 ("count.", "brief.") were closed with non-breaking spaces; none remain.
+4. Renders refreshed in `deck/draft-v6-renders/` and sent to the candidate.
+
+**Files changed:** `scripts/gen_draft6_layout.py`, `deck/draft-v6-src/project/slides/*.html`, `deck/draft-v6-renders/*.png`, this log. Not committed. Not published as an artifact.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 39 — 2026-10-08 11:15 EDT — Final pass: polish, AI disclosure band with QR, export checks; slide 5 floor decision pending
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1. Local libraries added for this turn: segno (QR generation), pypdf (PDF inspection), OpenCV headless (QR decoding).
+
+**Candidate prompts (verbatim lead, pasted brief summarized):**
+> Final pass before submission. Apply these changes, then export.
+
+> also my name is Tom Léger
+
+Followed by a pasted brief (summarized): slide 2 "The integration count." becomes "Integration count."; slide 1 Assumed line gains a period; slide 5 restores the standard footer and gains an AI disclosure band after the Risks row with a 2px rule, an "AI USE" label, 22px text in columns 3–10 (supplied verbatim, with a clickable link to the process log), and a locally generated inline-SVG QR code in columns 11–12 of at least 128px with a quiet zone and an 18px "Process log" caption beneath; no hours or prompt placeholders anywhere; everything above the 960px floor, with table row padding allowed to drop from 16px to 12px, no type shrinking; slide 5 notes replace the final sentence with the supplied disclosure sentence; export a slides-only five-page 1920×1080 PDF and verify the link annotation, the QR decode, and that no wording changed beyond the listed items.
+
+**Candidate decisions (recorded):** all of the above; the footer name is "Tom Léger".
+
+**Steps taken:**
+1. Applied the polish, the footer name, the notes sentence, and the band in `scripts/gen_draft6_layout.py`. QR generated with segno (error level M, 4-module quiet zone, dark modules #111111, no light modules) as inline SVG. Wording diff against the previous Draft 6: the period, "Léger" on all five footers, "Integration count.", and the slide 5 band text replacing the citation footer; nothing else. Slide 5 notes: only the final sentence changed, 32 of 33 sentences unchanged. The apostrophe in "aren’t" is typographic, matching the rest of the deck.
+2. Export: `scripts/render_deck_pdf.py --native` produces 1920×1080 px pages (1440×810 pt). Proof export: five pages; page 5 carries one /Link annotation to https://tomleger.dev/sony-case-study/; the QR decodes to exactly that URL from both the 1920×1080 slide render and a 2880×1620 raster of PDF page 5 (OpenCV).
+3. Floor measurement on slide 5 (slides 1–4 unchanged at 928): as specified with 12px rows and the deck's standard band spacing, content ends at 1070.7, which is 110.7px below the floor. The AI band is 197px tall because the QR block (128px QR, 8px gap, caption wrapping to two lines in the 128px-wide QR box) is far taller than the three-line text. Variants measured: tight gaps (16 above the rule, 8 below, 8/8 in the payback band) 70.7 below; tight gaps with a one-line caption flush right under the QR 49.1 below; 8px rows with tight gaps 14.7 below; 8px rows, tight gaps, and the one-line caption fits, ending at 953.1, 6.9px above the floor. Nothing was shrunk or cut; the repo holds the specified 12px build, and the fitting variant was rendered for comparison. Decision left to the candidate.
+4. Also this turn: a pip install briefly moved numpy to 2.5.3 in the Anaconda environment and broke two unrelated packages; restored numpy 1.26.4 (the conda-recorded version) with a compatible OpenCV build, pip check clean.
+
+**Files changed:** `scripts/gen_draft6_layout.py`, `scripts/render_deck_pdf.py` (rewritten with `--native`), `scripts/measure_slides.js`, `deck/draft-v6-src/project/slides/*.html`, `deck/draft-v6-renders/*.png`, this log. Not committed. No final PDF written to the repo yet; the proof lives in the session scratch folder pending the slide 5 decision.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 40 — 2026-10-08 11:20 EDT — Slide 5 layout approved; final PDF exported and verified
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> Go with 8px rows and the one-line caption, export the final PDF
+
+**Candidate decision (recorded):** slide 5 table rows at 8px vertical padding; the AI band uses the tightest spacing from the scale (16px above its rule, 8px below; payback band 8px above and between rows); the QR caption sits on one line, flush right under the QR. Type sizes unchanged.
+
+**Steps taken:**
+1. Made that layout the generator default and regenerated `deck/draft-v6-src/`. Visible wording and notes are byte-identical to the previous build on all five slides.
+2. Measurement: slides 1–4 end at 928 (32px above the 960 floor); slide 5 ends at 953.1 (6.9px above). All headlines within two lines; nothing off-grid; no single-word last lines; no horizontal overflow.
+3. Exported `deck/Tom-Leger-Sony-Music-case-study.pdf` with `scripts/render_deck_pdf.py --native`: five pages at 1440×810 pt (1920×1080 px at 96 dpi), slides only, no speaker-note text in the file. Page 5 carries one link annotation to https://tomleger.dev/sony-case-study/. The QR decodes to exactly that URL from the 1920×1080 slide render and from a 2880×1620 raster of PDF page 5.
+4. Renders refreshed in `deck/draft-v6-renders/`.
+
+**Still open for the candidate before sending:** the time ledger at the top of this log (the slide no longer shows hours, but the brief asks for time allotted, which the log is meant to carry); republishing this log to tomleger.dev so the slide's link and QR resolve to the current version; committing the repo.
+
+**Files changed:** `scripts/gen_draft6_layout.py`, `deck/draft-v6-src/project/slides/*.html`, `deck/draft-v6-renders/*.png`, `deck/Tom-Leger-Sony-Music-case-study.pdf` (new), this log. Not committed.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 41 — 2026-10-08 11:25 EDT — Disclosure line corrected; time placeholder removed from this log; final PDF re-exported
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> ok so "those aren’t in the log." --the prompts are in the log but the full chats themselves arent
+
+> go with smallest edit yes, remove “Time and” from the slide, so it reads “Prompts are in the process log.” Also delete the placeholder note from the log. --it should be timestamps and prompts. i didnt calculate time elapsed
+
+**Candidate decisions (recorded):** slide 5 disclosure reads "Prompts are in the process log: tomleger.dev/sony-case-study." and "those chats aren’t in the log."; this log records timestamps and prompts, with no elapsed-time figure.
+
+**Steps taken:**
+1. Slide 5 band text edited as decided. The matching speaker-notes sentence lost "Time and" as well, so the script says the same thing as the slide; flagged to the candidate. No other wording changed on any slide; notes on slides 1–4 identical.
+2. This log: the empty time ledger and the "Total active time" placeholder removed; the header's time note rewritten to say timestamps are wall-clock markers and no elapsed time was calculated; the Codex bullet now points to its prompts in Turn 16; the sentence "Candidate to enter active time in the ledger." replaced in 25 turn entries with "No elapsed time was calculated." Earlier narrative mentions of the ledger (Turns 14, 19, 28, 34, 40) are left as history.
+3. Re-measured: slides 1–4 end at 928, slide 5 at 953.1; the band text is still three lines. Re-exported `deck/Tom-Leger-Sony-Music-case-study.pdf`: five pages at 1440×810 pt, slides only, page 5 link annotation to https://tomleger.dev/sony-case-study/, QR decodes to that exact URL from the slide render and from a raster of PDF page 5, page 5 text contains the corrected sentences and no "Time and".
+
+**Still open for the candidate:** republish this log to tomleger.dev so the slide's link and QR resolve to the current version; commit the repo.
+
+**Files changed:** `scripts/gen_draft6_layout.py`, `deck/draft-v6-src/project/slides/measures.html`, `deck/draft-v6-renders/*.png`, `deck/Tom-Leger-Sony-Music-case-study.pdf`, this log. Not committed.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 42 — 2026-10-08 11:35 EDT — Log republished to tomleger.dev; repository committed and pushed
+
+**Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
+
+**Candidate prompt (verbatim):**
+> republish the log and commit everything and push live to github
+
+**Steps taken:**
+1. The published page's intro line still promised "the active time per turn"; `scripts/render_log.py` now says each turn carries a wall-clock timestamp and that no elapsed time was calculated, matching the Turn 41 decision.
+2. Ran `scripts/publish-log.sh`: this log copied into the portfolio site repo under `sony-case-study/`, rendered to HTML, committed, and pushed to GitHub Pages at https://tomleger.dev/sony-case-study/ (the address on slide 5 and in its QR code).
+3. Committed this repository's working tree, which had been uncommitted since Turn 34: Drafts 5 and 6 sources, the Draft 6 renders, the draft PDFs, the final PDF `deck/Tom-Leger-Sony-Music-case-study.pdf`, the deck scripts (word count, PDF export, slide screenshots, grid measurement, text diff, Draft 6 layout generator), and this log through this entry. Pushed to `origin/main` on GitHub.
+
+**Files changed:** `scripts/render_log.py`, this log; plus the commit above.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
