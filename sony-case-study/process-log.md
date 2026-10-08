@@ -744,7 +744,27 @@ Followed by a pasted review from a second Claude session (summarized): (1) disco
 
 ---
 
-## Turn 34 — 2026-10-08 09:15–09:26 EDT — Pull, status catch-up, Draft 4 rendered to PDF
+## Turn 34 — 2026-10-08 09:05 EDT — Repo pushed; public log republished
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> push everythign to github
+
+> publish the log too
+
+**Steps taken:**
+1. Pushed fifteen commits (Turns 19–33, Draft 2 outline, Draft 2–4 slide source) to github.com/legertom/ugc-dashboard.
+2. The publish script failed on first run: this machine is not the one Turns 14–15 ran on. It had no clone of the portfolio site at the expected path, and its system Python lacked the `markdown` module. Fixed by cloning `legertom/tomleger-portfolio` to `~/repo/tomleger-portfolio` and installing `markdown` for the user. The script then rendered, committed, and pushed; the site copy of the log matches the repo.
+3. Republished after this entry so the public log includes it.
+
+**Files changed:** this log.
+
+**Time:** Timestamps are wall-clock markers only. No elapsed time was calculated.
+
+---
+
+## Turn 35 — 2026-10-08 09:15–09:26 EDT — Pull, status catch-up, Draft 4 rendered to PDF
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -769,7 +789,7 @@ Followed by a pasted review from a second Claude session (summarized): (1) disco
 
 ---
 
-## Turn 35 — 2026-10-08 09:40 EDT — Draft 5 content pass: five slides, plain language, word counts
+## Turn 36 — 2026-10-08 09:40 EDT — Draft 5 content pass: five slides, plain language, word counts
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -792,7 +812,7 @@ Followed by a pasted content brief (summarized): implement only the listed decis
 
 ---
 
-## Turn 36 — 2026-10-08 10:35 EDT — Draft 6: Swiss grid layout pass, overflow measured and reported
+## Turn 37 — 2026-10-08 10:35 EDT — Draft 6: Swiss grid layout pass, overflow measured and reported
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -819,7 +839,7 @@ Followed by a pasted layout brief (summarized): layout only, no wording changes;
 
 ---
 
-## Turn 37 — 2026-10-08 10:50 EDT — Draft 6: approved cuts and layout adjustments applied; slides 2 and 3 still over
+## Turn 38 — 2026-10-08 10:50 EDT — Draft 6: approved cuts and layout adjustments applied; slides 2 and 3 still over
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -832,7 +852,7 @@ Followed by a pasted brief (summarized). Approved content changes, and only thes
 
 **Steps taken:**
 1. Applied the six content changes and the layout changes in `scripts/gen_draft6_layout.py`; regenerated `deck/draft-v6-src/`. Text diff against Draft 5 shows exactly the approved changes plus chrome. Notes identical on slides 1–4; slide 5 notes differ in one sentence only: "Payback in months is build and run cost divided by monthly hours saved times the rate." became "Payback in months is build cost divided by the net monthly saving: monthly hours saved times the rate, minus the monthly run cost." The other 32 sentences are unchanged.
-2. First measurement: slide 2 over by 55px, slide 3 by 17px, slide 5 by 5px. The slide 5 overage came from label-column rows set to a 41px line box in Turn 36 to align label and body baselines. Replaced that with true baseline alignment on the band grid (`align-items: baseline`, label at its natural line height). No content or type size changed; label rows are 6px shorter deck-wide.
+2. First measurement: slide 2 over by 55px, slide 3 by 17px, slide 5 by 5px. The slide 5 overage came from label-column rows set to a 41px line box in Turn 37 to align label and body baselines. Replaced that with true baseline alignment on the band grid (`align-items: baseline`, label at its natural line height). No content or type size changed; label rows are 6px shorter deck-wide.
 3. Final measurement against the 960px floor: slide 1 ends at 960 (0); slide 2 ends at 1003.6 (43.6px below the floor); slide 3 ends at 977.1 (17.1px below); slide 4 ends at 960 (0); slide 5 ends at 953.5 (6.5px above). All headlines two lines; nothing off-grid; no horizontal overflow; no single-word last lines; slide 5 table rows all single-line; slide 5 footer one line with the placeholders. Stopped on slides 2 and 3 per instruction.
 4. Causes: slide 2's tallest column is now Providers (columns 3–5, 392px wide), where both quoted questions wrap to two lines. Slide 3's left list needs three lines in its given order at 26px in five columns (Delivery method · Platform fields / Contract and regional rules · Escalation routes / The owner’s workflow); the right list holds two lines.
 5. Options reported to the candidate, not applied: slide 2, widen Providers to columns 3–6 and narrow Consumers to 7–9 now that the Consumers sentence is short (both questions then fit one line each, saving 70px), or reduce the headline-to-content gap from 64px to 32px deck-wide (saves 32px, slide 2 still 12px over); slide 3, reorder the left list so it packs into two lines (a content-order change), or the 32px headline gap (fits with 15px to spare but the list stays three lines).
@@ -843,7 +863,7 @@ Followed by a pasted brief (summarized). Approved content changes, and only thes
 
 ---
 
-## Turn 38 — 2026-10-08 11:05 EDT — Draft 6: breathing room, slide 2 columns, slide 3 list reorder, capitalization; all five slides fit
+## Turn 39 — 2026-10-08 11:05 EDT — Draft 6: breathing room, slide 2 columns, slide 3 list reorder, capitalization; all five slides fit
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -852,11 +872,11 @@ Followed by a pasted brief (summarized). Approved content changes, and only thes
 
 Followed by a pasted brief (summarized): headline 72px to 60px (line-height 1.0, letter-spacing −1.5px, columns 1–10, max two lines); top padding 96px to 64px; every slide's content to end at least 32px above the 960px floor; slide 2 columns Inventory 1–2, Providers 3–6, Consumers 7–9, Tickets 10–12; slide 3 lists reordered into two lines each ("Delivery method · Platform fields · Escalation routes" / "Contract and regional rules · The owner’s workflow"; "Identifiers and definitions · Minimum intake fields · Status labels" / "One owner per source · Access and audit rules") with gray separators and 16px each side, 8px between lines; capitalize the first word of any text that follows a label on its own line; verify by rendering, reporting each slide's end relative to 960px, and confirming no wording changed beyond the reorder and the capitalization.
 
-**Candidate decisions (recorded):** all of the above, including the slide 2 column change proposed in Turn 37.
+**Candidate decisions (recorded):** all of the above, including the slide 2 column change proposed in Turn 38.
 
 **Steps taken:**
 1. Applied the changes in `scripts/gen_draft6_layout.py` and regenerated `deck/draft-v6-src/`. The content floor for anchored bottom bands moved from 960 to 928 (section bottom padding 152px) so bands sit 32px above the old floor and 64px above the footer.
-2. Wording check against the Draft 6 version the candidate had just seen: slide 1 three capitalizations (Sampling, An, A); slide 2 six (The, Baseline, What, The, Sample, A); slide 3 the reorder with "·" separators and one capitalization (Build); slide 4 one (Source); slide 5 none. Notes unchanged on all five slides from the previous turn (slide 5 keeps the Turn 37 payback sentence).
+2. Wording check against the Draft 6 version the candidate had just seen: slide 1 three capitalizations (Sampling, An, A); slide 2 six (The, Baseline, What, The, Sample, A); slide 3 the reorder with "·" separators and one capitalization (Build); slide 4 one (Source); slide 5 none. Notes unchanged on all five slides from the previous turn (slide 5 keeps the Turn 38 payback sentence).
 3. Measurement: slide 1 content ends at 928 (headline now one line at 60px); slides 2, 3, and 4 end at 928; slide 5 ends at 897.5. All at least 32px above 960. Headlines within two lines; nothing off-grid; no horizontal overflow. Slide 3 lists two lines each; slide 5 table rows single-line. Two single-word last lines introduced by the capitalization on slide 2 ("count.", "brief.") were closed with non-breaking spaces; none remain.
 4. Renders refreshed in `deck/draft-v6-renders/` and sent to the candidate.
 
@@ -866,7 +886,7 @@ Followed by a pasted brief (summarized): headline 72px to 60px (line-height 1.0,
 
 ---
 
-## Turn 39 — 2026-10-08 11:15 EDT — Final pass: polish, AI disclosure band with QR, export checks; slide 5 floor decision pending
+## Turn 40 — 2026-10-08 11:15 EDT — Final pass: polish, AI disclosure band with QR, export checks; slide 5 floor decision pending
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1. Local libraries added for this turn: segno (QR generation), pypdf (PDF inspection), OpenCV headless (QR decoding).
 
@@ -891,7 +911,7 @@ Followed by a pasted brief (summarized): slide 2 "The integration count." become
 
 ---
 
-## Turn 40 — 2026-10-08 11:20 EDT — Slide 5 layout approved; final PDF exported and verified
+## Turn 41 — 2026-10-08 11:20 EDT — Slide 5 layout approved; final PDF exported and verified
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -914,7 +934,7 @@ Followed by a pasted brief (summarized): slide 2 "The integration count." become
 
 ---
 
-## Turn 41 — 2026-10-08 11:25 EDT — Disclosure line corrected; time placeholder removed from this log; final PDF re-exported
+## Turn 42 — 2026-10-08 11:25 EDT — Disclosure line corrected; time placeholder removed from this log; final PDF re-exported
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -938,7 +958,7 @@ Followed by a pasted brief (summarized): slide 2 "The integration count." become
 
 ---
 
-## Turn 42 — 2026-10-08 11:35 EDT — Log republished to tomleger.dev; repository committed and pushed
+## Turn 43 — 2026-10-08 11:35 EDT — Log republished to tomleger.dev; repository committed and pushed
 
 **Program:** Claude Code (Anthropic), desktop app, model Claude Fable 5.1.
 
@@ -946,9 +966,11 @@ Followed by a pasted brief (summarized): slide 2 "The integration count." become
 > republish the log and commit everything and push live to github
 
 **Steps taken:**
-1. The published page's intro line still promised "the active time per turn"; `scripts/render_log.py` now says each turn carries a wall-clock timestamp and that no elapsed time was calculated, matching the Turn 41 decision.
+1. The published page's intro line still promised "the active time per turn"; `scripts/render_log.py` now says each turn carries a wall-clock timestamp and that no elapsed time was calculated, matching the Turn 42 decision.
 2. Ran `scripts/publish-log.sh`: this log copied into the portfolio site repo under `sony-case-study/`, rendered to HTML, committed, and pushed to GitHub Pages at https://tomleger.dev/sony-case-study/ (the address on slide 5 and in its QR code).
-3. Committed this repository's working tree, which had been uncommitted since Turn 34: Drafts 5 and 6 sources, the Draft 6 renders, the draft PDFs, the final PDF `deck/Tom-Leger-Sony-Music-case-study.pdf`, the deck scripts (word count, PDF export, slide screenshots, grid measurement, text diff, Draft 6 layout generator), and this log through this entry. Pushed to `origin/main` on GitHub.
+3. Committed this repository's working tree, which had been uncommitted since Turn 35: Drafts 5 and 6 sources, the Draft 6 renders, the draft PDFs, the final PDF `deck/Tom-Leger-Sony-Music-case-study.pdf`, the deck scripts (word count, PDF export, slide screenshots, grid measurement, text diff, Draft 6 layout generator), and this log through this entry. Pushed to `origin/main` on GitHub.
+
+4. A commit from the morning session on this machine (its own Turn 34, 09:05, repo pushed and log republished) had landed on `origin/main` in the meantime, so the first push was rejected. Rebased onto it; this session's entries, originally numbered 34–42, were renumbered 35–43 to follow it in order, and the log was republished a second time.
 
 **Files changed:** `scripts/render_log.py`, this log; plus the commit above.
 
