@@ -40,7 +40,7 @@
       <a class="btn ghost" href="javascript:window.print()">Print / PDF</a>
     </div>
   </div>
-  <p class="note">This page is the AI-use citation required by the case-study brief: every working turn, the exact prompts given, the tools used, and the active time per turn. It is regenerated from the working repository. Last published 2026-10-08 09:04 EDT.</p>
+  <p class="note">This page is the AI-use citation required by the case-study brief: every working turn, the exact prompts given, the tools used, and the active time per turn. It is regenerated from the working repository. Last published 2026-10-08 09:05 EDT.</p>
   <h1>Process Log — Sony Music Take-Home Case Study</h1>
 <p><strong>Purpose:</strong> The case study requires that any AI or technical tools be cited by program name, time allotted, and prompt used. This log records every working turn so the final submission can disclose AI assistance accurately and so the reasoning trail is reportable.</p>
 <p><strong>Tool disclosure (standing):</strong>
@@ -630,6 +630,20 @@ If we suddenly lost access to frotier AI, this project would take a lot longer. 
 2. Design system: warm off-white ground (#F4F3EE), near-black type (#111111), secondary text (#4A4A4A), one red (#F90000). A full-width black band across the top carrying the deck name and the candidate line. A 3px rule, a numbered section line, a 64px Bold sentence-case title flush left with tight leading. Body in a column grid with 1px hairlines; large Bold numerals in place of circles; thick black bars as timeline segments. No texture, gradient, radius, shadow, or icon. Red once per slide: the three title words, the 4px standardization rule, the pilot bar, a 16px square beside the payback figure. Footer: month left, page number right, hairline above the footnote block.
 3. Four slides with Draft 3's content and titles: diagnosis (three ruled columns, numerals 1–3, Tested by lines, Given and Assumed footnote); future state (five numbered columns split by the red rule, tailored and standard lists, Approach footnote); discovery, pilot, rollout (three columns with black, red, black bars, gate labels, three lines each, a Produces line for discovery and a Why line for pilot and rollout, Assumption and In the room footnote); measures (ruled scorecard, red square beside the payback placeholder, Rollout and Risks footnote, AI disclosure in the footer).</p>
 <p><strong>Files changed:</strong> <code>deck/draft-v4-src/project/deck.json</code>, <code>deck/draft-v4-src/project/slides/{diagnosis,design,roadmap,measures}.html</code> (all new), this log.</p>
+<p><strong>Time:</strong> Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.</p>
+<hr />
+<h2>Turn 34 — 2026-10-08 09:05 EDT — Repo pushed; public log republished</h2>
+<p><strong>Program:</strong> Claude Code (Anthropic), model Claude Fable 5.1.</p>
+<p><strong>Candidate prompts (verbatim):</strong></p>
+<blockquote>
+<p>push everythign to github</p>
+<p>publish the log too</p>
+</blockquote>
+<p><strong>Steps taken:</strong>
+1. Pushed fifteen commits (Turns 19–33, Draft 2 outline, Draft 2–4 slide source) to github.com/legertom/ugc-dashboard.
+2. The publish script failed on first run: this machine is not the one Turns 14–15 ran on. It had no clone of the portfolio site at the expected path, and its system Python lacked the <code>markdown</code> module. Fixed by cloning <code>legertom/tomleger-portfolio</code> to <code>~/repo/tomleger-portfolio</code> and installing <code>markdown</code> for the user. The script then rendered, committed, and pushed; the site copy of the log matches the repo.
+3. Republished after this entry so the public log includes it.</p>
+<p><strong>Files changed:</strong> this log.</p>
 <p><strong>Time:</strong> Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.</p>
 </main>
 </body>

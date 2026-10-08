@@ -753,3 +753,23 @@ Followed by a pasted review from a second Claude session (summarized): (1) disco
 **Files changed:** `deck/draft-v4-src/project/deck.json`, `deck/draft-v4-src/project/slides/{diagnosis,design,roadmap,measures}.html` (all new), this log.
 
 **Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
+
+---
+
+## Turn 34 — 2026-10-08 09:05 EDT — Repo pushed; public log republished
+
+**Program:** Claude Code (Anthropic), model Claude Fable 5.1.
+
+**Candidate prompts (verbatim):**
+> push everythign to github
+
+> publish the log too
+
+**Steps taken:**
+1. Pushed fifteen commits (Turns 19–33, Draft 2 outline, Draft 2–4 slide source) to github.com/legertom/ugc-dashboard.
+2. The publish script failed on first run: this machine is not the one Turns 14–15 ran on. It had no clone of the portfolio site at the expected path, and its system Python lacked the `markdown` module. Fixed by cloning `legertom/tomleger-portfolio` to `~/repo/tomleger-portfolio` and installing `markdown` for the user. The script then rendered, committed, and pushed; the site copy of the log matches the repo.
+3. Republished after this entry so the public log includes it.
+
+**Files changed:** this log.
+
+**Time:** Timestamps are wall-clock markers only. Candidate to enter active time in the ledger.
